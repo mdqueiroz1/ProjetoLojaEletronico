@@ -1,0 +1,27 @@
+body{
+  position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+
+}
+
+.form-select{
+  display: flex;
+  justify-content: center!important;
+  text-align: center !important;
+  width: 300px;
+}
+
+.center{
+justify-content: center!important;
+text-align: center !important;
+align-items: center;
+
+}
+
+.btn-convert{
+width: 30%;
+}
+
+

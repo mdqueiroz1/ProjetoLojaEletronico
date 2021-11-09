@@ -1,0 +1,32 @@
+<head>
+
+</head>
+<body>
+  <div class="position-absolute top-50 start-50 translate-middle bloco-principal">
+    <ul class="list-group">
+      <li class="list-group-item border-0">
+        <h3>Conversor</h3>
+      </li>
+      <li class="list-group-item border-0">
+        Informe o valor em reais:
+      </li>
+      <li class="list-group-item border-0">
+        <input type="number" [(ngModel)]="moeda2" class="valorRealInput">
+      </li>
+      <li class="list-group-item border-0">
+        <p>Selecione a moeda para a conversão:</p>
+        <select [(ngModel)]="moeda1" class="form-select" aria-label="Default select example">
+          <option disabled="true">Selecione a moeda atual</option>
+          <option *ngFor="let item of lista" [value]="item.high">{{item.name}}</option>
+        </select>
+      </li>
+      <li class="list-group-item border-0">
+        <button (click)="fazerConversao()" class="btn-primary btn-convert rounded-pill">Converter</button>
+      </li>
+      <li class="list-group-item border-0">
+        <p>R$:{{resultadoConvercao}}</p>
+      </li>
+    </ul>
+  </div>
+</body>
+
