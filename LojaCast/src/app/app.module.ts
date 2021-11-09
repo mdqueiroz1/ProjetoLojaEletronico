@@ -8,7 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
-import { Page401Component } from './page404/page404.component';
+import { Page404Component } from './page404/page404.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 
 import { AngularFireModule } from '@angular/fire';
@@ -21,7 +21,7 @@ import { AuthService } from './auth.service';
     AppComponent,
     LoginComponent,
     HomeComponent,
-    Page401Component,
+    Page404Component,
     CadastroComponent,
 
   ],
