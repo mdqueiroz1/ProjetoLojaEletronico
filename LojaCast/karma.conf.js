@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/LojaCast'),
+      dir: require('path').join(__dirname, './coverage/conversor-Angular'),
       subdir: '.',
       reporters: [
         { type: 'html' },
