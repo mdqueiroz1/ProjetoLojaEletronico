@@ -40,6 +40,7 @@ export class AuthService {
     .then(
       value=>{
         console.log("usuário cadastrado com sucesso");
+        window.location.href = "login";
       }
 
     ).catch((error)=>{

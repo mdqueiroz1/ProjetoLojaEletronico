@@ -16,7 +16,7 @@ export class CadastroComponent implements OnInit {
   ngOnInit(): void {  }
 
   cadastrarLogin(){
-    this.authService.signUpEmail(this.email, this.senha)
+    this.authService.signUpEmail(this.email, this.senha);
   }
 
 }
