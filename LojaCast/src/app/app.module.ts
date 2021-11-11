@@ -14,6 +14,7 @@ import { CadastroComponent } from './cadastro/cadastro.component';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AuthService } from './auth.service';
+import { PagamentoComponent } from './pagamento/pagamento.component';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { AuthService } from './auth.service';
     HomeComponent,
     Page404Component,
     CadastroComponent,
+    PagamentoComponent,
 
   ],
   imports: [
