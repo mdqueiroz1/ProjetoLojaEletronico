@@ -12,8 +12,9 @@ import { Page404Component } from './page404/page404.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 
 import { AngularFireModule } from '@angular/fire';
-import { AngularFireAuthModule} from '@angular/fire/auth';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AuthService } from './auth.service';
+import { PagamentoComponent } from './pagamento/pagamento.component';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { AuthService } from './auth.service';
     HomeComponent,
     Page404Component,
     CadastroComponent,
+    PagamentoComponent,
 
   ],
   imports: [
@@ -35,13 +37,13 @@ import { AuthService } from './auth.service';
     AngularFireAuthModule,
     AngularFireModule.initializeApp(
       {
-      apiKey: "AIzaSyAkmeD1yjjjqpV1LOEnPrHYvtNsbrRv_qA",
-      authDomain: "projetoconversor-64ea6.firebaseapp.com",
-      projectId: "projetoconversor-64ea6",
-      storageBucket: "projetoconversor-64ea6.appspot.com",
-      messagingSenderId: "424121813776",
-      appId: "1:424121813776:web:01b1ba8fd3a848a7ddb395"
-    }),
+        apiKey: "AIzaSyBvWbroFKEazUNgLekqjR29qAl_38P0OAE",
+        authDomain: "lojacast-88f71.firebaseapp.com",
+        projectId: "lojacast-88f71",
+        storageBucket: "lojacast-88f71.appspot.com",
+        messagingSenderId: "1025044451661",
+        appId: "1:1025044451661:web:f1cb31e610d7c556ad6704"
+      }),
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
-import firebase from 'firebase/app';
 import { AngularFireAuth } from '@angular/fire/auth';
-import { Observable } from 'rxjs';
+
 
 @Injectable({
   providedIn: 'root'
@@ -23,7 +22,7 @@ export class AuthService {
     this.fireBaseAuth.signInWithEmailAndPassword(email, senha)
     .then(
       value => {
-        console.log("uauário logado")
+        console.log("usuário logado com sucesso")
       }
 
     ).catch((error) => {

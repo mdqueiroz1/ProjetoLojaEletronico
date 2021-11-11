@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControlName, FormGroupName, FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
 
 @Component({
@@ -19,8 +19,8 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {  }
 
-  liberarCasdastro() {
-    this.mostrarCadastro = !this.mostrarCadastro
+  clickCadastro() {
+    window.location.href = "cadastro";
   }
 
 
