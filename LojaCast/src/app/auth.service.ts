@@ -23,6 +23,7 @@ export class AuthService {
     .then(
       value => {
         console.log("usuário logado com sucesso")
+        window.location.href = "home";
       }
 
     ).catch((error) => {
