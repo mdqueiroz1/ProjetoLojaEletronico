@@ -23,9 +23,9 @@ export class LoginComponent implements OnInit {
     window.location.href = "cadastro";
   }
 
-
   fazerLogin() {
     this.authService.loginWithEmail(this.email, this.senha)
   }
+
 }
 

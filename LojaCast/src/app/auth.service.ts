@@ -23,12 +23,31 @@ export class AuthService {
     .then(
       value => {
         console.log("usuário logado com sucesso")
+        window.location.href = "home";
       }
 
     ).catch((error) => {
       console.log(error.menssage);
       thisService.authError = error;
     })
-  };
+  }
+
+  signUpEmail(email:string, senha:string){
+    let thisService = this;
+
+    thisService.authError = null;
+
+    this.fireBaseAuth.createUserWithEmailAndPassword(email,senha)
+    .then(
+      value=>{
+        console.log("usuário cadastrado com sucesso");
+        window.location.href = "login";
+      }
+
+    ).catch((error)=>{
+      console.log(error.menssage);
+      thisService.authError = error;
+    })
+  }
 
 }
