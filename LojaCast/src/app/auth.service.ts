@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { AngularFireAuth, AngularFireAuthModule } from '@angular/fire/auth';
-import { from } from 'rxjs';
+import { AngularFireAuth } from '@angular/fire/auth';
+
 
 @Injectable({
   providedIn: 'root'
@@ -8,6 +8,7 @@ import { from } from 'rxjs';
 
 export class AuthService {
   authError: any;
+  usuarioLogado: any;
 
   constructor(public fireBaseAuth: AngularFireAuth) {
     //this.user = fireBaseAuth.authState;
@@ -23,6 +24,8 @@ export class AuthService {
     .then(
       value => {
         console.log("usuário logado com sucesso")
+        this.usuarioLogado = this.fireBaseAuth.currentUser
+        localStorage.setItem("id", this.usuarioLogado)
         window.location.href = "";
       }
 

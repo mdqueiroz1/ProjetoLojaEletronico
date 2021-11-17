@@ -34,7 +34,6 @@ const configFirebase = {
     Page404Component,
     CadastroComponent,
     PagamentoComponent,
-
   ],
   imports: [
     CommonModule,
