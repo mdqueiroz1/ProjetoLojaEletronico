@@ -1,4 +1,6 @@
 import { NgModule } from '@angular/core';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFireModule } from '@angular/fire';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
@@ -11,10 +13,17 @@ import { HomeComponent } from './home/home.component';
 import { Page404Component } from './page404/page404.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 
-import { AngularFireModule } from '@angular/fire';
-import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AuthService } from './auth.service';
 import { PagamentoComponent } from './pagamento/pagamento.component';
+
+const configFirebase = {
+  apiKey: "AIzaSyBvWbroFKEazUNgLekqjR29qAl_38P0OAE",
+  authDomain: "lojacast-88f71.firebaseapp.com",
+  projectId: "lojacast-88f71",
+  storageBucket: "lojacast-88f71.appspot.com",
+  messagingSenderId: "1025044451661",
+  appId: "1:1025044451661:web:f1cb31e610d7c556ad6704"
+};
 
 
 @NgModule({
@@ -35,15 +44,7 @@ import { PagamentoComponent } from './pagamento/pagamento.component';
     HttpClientModule,
     ReactiveFormsModule,
     AngularFireAuthModule,
-    AngularFireModule.initializeApp(
-      {
-        apiKey: "AIzaSyBvWbroFKEazUNgLekqjR29qAl_38P0OAE",
-        authDomain: "lojacast-88f71.firebaseapp.com",
-        projectId: "lojacast-88f71",
-        storageBucket: "lojacast-88f71.appspot.com",
-        messagingSenderId: "1025044451661",
-        appId: "1:1025044451661:web:f1cb31e610d7c556ad6704"
-      }),
+    AngularFireModule.initializeApp(configFirebase),
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

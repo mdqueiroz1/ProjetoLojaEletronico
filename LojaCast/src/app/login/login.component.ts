@@ -27,5 +27,7 @@ export class LoginComponent implements OnInit {
     this.authService.loginWithEmail(this.email, this.senha)
   }
 
+
+
 }
 

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { AngularFireAuth } from '@angular/fire/auth';
-
+import { AngularFireAuth, AngularFireAuthModule } from '@angular/fire/auth';
+import { from } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -23,7 +23,7 @@ export class AuthService {
     .then(
       value => {
         console.log("usuário logado com sucesso")
-        window.location.href = "home";
+        window.location.href = "";
       }
 
     ).catch((error) => {
