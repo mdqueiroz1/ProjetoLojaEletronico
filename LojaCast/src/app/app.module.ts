@@ -5,7 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatSliderModule } from '@angular/material/slider';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -47,7 +47,6 @@ const configFirebase = {
     ReactiveFormsModule,
     AngularFireAuthModule,
     AngularFireModule.initializeApp(configFirebase),
-    MatSliderModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

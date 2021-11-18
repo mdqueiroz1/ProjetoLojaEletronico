@@ -8,7 +8,7 @@ import { AngularFireAuth } from '@angular/fire/auth';
 
 export class AuthService {
   authError: any;
-  usuarioLogado: any;
+  usuarioLogado:any;
 
   constructor(public fireBaseAuth: AngularFireAuth) {
     //this.user = fireBaseAuth.authState;
