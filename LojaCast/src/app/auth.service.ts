@@ -8,6 +8,7 @@ import { AngularFireAuth } from '@angular/fire/auth';
 
 export class AuthService {
   authError: any;
+  usuarioLogado:any;
 
   constructor(public fireBaseAuth: AngularFireAuth) {
     //this.user = fireBaseAuth.authState;
@@ -23,7 +24,9 @@ export class AuthService {
     .then(
       value => {
         console.log("usuário logado com sucesso")
-        window.location.href = "home";
+        this.usuarioLogado = this.fireBaseAuth.currentUser
+        localStorage.setItem("id", this.usuarioLogado)
+        window.location.href = "";
       }
 
     ).catch((error) => {

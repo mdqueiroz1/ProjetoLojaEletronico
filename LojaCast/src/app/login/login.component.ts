@@ -12,9 +12,6 @@ export class LoginComponent implements OnInit {
   public email: any;
   public senha: any;
 
-  public mostrarCadastro = false;
-
-
   constructor(public authService: AuthService) {  }
 
   ngOnInit(): void {  }
@@ -23,9 +20,15 @@ export class LoginComponent implements OnInit {
     window.location.href = "cadastro";
   }
 
+  clickCadastroGoogle(){
+
+  }
+
   fazerLogin() {
     this.authService.loginWithEmail(this.email, this.senha)
   }
+
+
 
 }
 
