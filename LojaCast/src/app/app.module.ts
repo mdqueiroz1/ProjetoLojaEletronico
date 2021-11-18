@@ -5,6 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatSliderModule } from '@angular/material/slider';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +16,7 @@ import { CadastroComponent } from './cadastro/cadastro.component';
 
 import { AuthService } from './auth.service';
 import { PagamentoComponent } from './pagamento/pagamento.component';
+import { HeaderComponent } from './header/header.component';
 
 const configFirebase = {
   apiKey: "AIzaSyBvWbroFKEazUNgLekqjR29qAl_38P0OAE",
@@ -34,6 +36,7 @@ const configFirebase = {
     Page404Component,
     CadastroComponent,
     PagamentoComponent,
+    HeaderComponent,
   ],
   imports: [
     CommonModule,
@@ -44,6 +47,7 @@ const configFirebase = {
     ReactiveFormsModule,
     AngularFireAuthModule,
     AngularFireModule.initializeApp(configFirebase),
+    MatSliderModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
