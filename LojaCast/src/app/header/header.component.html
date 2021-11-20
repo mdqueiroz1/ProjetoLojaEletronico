@@ -1,2 +1,37 @@
 
+<mat-drawer-container class="example-container">
+  <mat-drawer #drawer class="campo-sidenav" mode="side">
+    <h2>Categorias</h2>
+    <p>Hardware</p>
+    <p>Periféricos</p>
+    <p>Games</p>
+    <p>Cadeiras</p>
+    <p>Computadores</p>
+    <p>TV</p>
+    <p>Celular & Telefonia</p>
+    <p>Tablets, iPads e E-Readers</p>
+    <p>Áudio</p>
+    <p>SmartHome</p>
+  </mat-drawer>
+  <div>
+    <button class="botao-sidenav" type="button" mat-button (click)="drawer.toggle()">
+      <i class="bi bi-list"></i>
+    </button>
+  </div>
+  <div class="barra-pesquisa-user">
+    <div class="container max-width">
+      <div class="row align-items-start">
+        <div class="col col3">
+          One of three columns
+        </div>
+        <div class="col">
+          One of three columns
+        </div>
+        <div class="col col3">
+          One of three columns
+        </div>
+      </div>
+    </div>
+  </div>
 
+</mat-drawer-container>
