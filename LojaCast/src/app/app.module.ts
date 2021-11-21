@@ -25,6 +25,8 @@ import { QuemSomosComponent } from './quem-somos/quem-somos.component';
 import { EntregaEfreteComponent } from './entrega-efrete/entrega-efrete.component';
 import { PoliticaEtrocaComponent } from './politica-etroca/politica-etroca.component';
 import { AngularMaterialModule } from './angular-material/angular-material.module';
+import { GridProdutosComponent } from './grid-produtos/grid-produtos.component';
+import { DescricaoProdutoComponent } from './descricao-produto/descricao-produto.component';
 
 const configFirebase = {
   apiKey: "AIzaSyBvWbroFKEazUNgLekqjR29qAl_38P0OAE",
@@ -49,6 +51,8 @@ const configFirebase = {
     QuemSomosComponent,
     EntregaEfreteComponent,
     PoliticaEtrocaComponent,
+    GridProdutosComponent,
+    DescricaoProdutoComponent,
   ],
   imports: [
     CommonModule,
