@@ -1,12 +1,12 @@
 .geral {
   background-color: orange;
-  height: 170px;
+  height: auto;
   display: flex;
 }
 .list-group {
   /*Usado para tirar os simbolos da lista*/
   list-style-type: none;
-  
+
 }
 * a {
   /*Usado para tirar os simbolos da lista*/
@@ -23,7 +23,7 @@
 .seguranca img {
   width: 200px;
   background-size: 100% 100%;
-  
+
 }
 
 .logoRedeSocial img {

@@ -4,7 +4,11 @@
   --background: orange;
 }
 
-
+.corpo-header{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
 
 /* !Menu lateral */
 .container-sidebar {
@@ -12,6 +16,7 @@
   height: 100%;
   float: left;
   position: relative;
+  background: none;
 }
 
 .campo-sidenav {
@@ -87,4 +92,24 @@
   vertical-align: middle;
   border-radius: 0px 8px 8px 0px;
   border: none;
+}
+
+.col-3{
+  background-color: aqua;
+}
+
+/* ! Area User */
+
+.icone-area-user{
+  margin-left: -5%;
+}
+
+.botao-area-user{
+  border: none;
+  background-color: transparent;
+}
+
+.opc-menu a{
+  text-decoration: none;
+  color: black;
 }
