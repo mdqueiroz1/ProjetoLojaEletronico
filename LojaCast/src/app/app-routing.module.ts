@@ -10,6 +10,7 @@ import { QuemSomosComponent } from './quem-somos/quem-somos.component';
 import { EntregaEfreteComponent } from './entrega-efrete/entrega-efrete.component';
 import { PoliticaEtrocaComponent } from './politica-etroca/politica-etroca.component';
 import { DescricaoProdutoComponent } from './descricao-produto/descricao-produto.component';
+import { GridProdutosComponent } from './grid-produtos/grid-produtos.component';
 
 const routes: Routes = [
   {path:'', component:HomeComponent},
@@ -20,6 +21,7 @@ const routes: Routes = [
   {path: 'entregaEfrete', component:EntregaEfreteComponent},
   {path: 'politicaEtroca', component:PoliticaEtrocaComponent},
   {path: 'descricaoProduto', component:DescricaoProdutoComponent},
+  {path: 'produtos', component:GridProdutosComponent}, /* TODO retirar rota de produtos */
   {path: '**',component:Page404Component},
 ];
 
