@@ -5,7 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -24,6 +24,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { QuemSomosComponent } from './quem-somos/quem-somos.component';
 import { EntregaEfreteComponent } from './entrega-efrete/entrega-efrete.component';
 import { PoliticaEtrocaComponent } from './politica-etroca/politica-etroca.component';
+import { AngularMaterialModule } from './angular-material/angular-material.module';
 
 const configFirebase = {
   apiKey: "AIzaSyBvWbroFKEazUNgLekqjR29qAl_38P0OAE",
@@ -56,10 +57,12 @@ const configFirebase = {
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule,
     AngularFireAuthModule,
     AngularFireModule.initializeApp(configFirebase),
     NoopAnimationsModule,
-    MatToolbarModule
+    MatToolbarModule,
+    AngularMaterialModule,
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
