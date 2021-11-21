@@ -17,6 +17,13 @@ import { CadastroComponent } from './cadastro/cadastro.component';
 import { AuthService } from './auth.service';
 import { PagamentoComponent } from './pagamento/pagamento.component';
 import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { QuemSomosComponent } from './quem-somos/quem-somos.component';
+import { EntregaEfreteComponent } from './entrega-efrete/entrega-efrete.component';
+import { PoliticaEtrocaComponent } from './politica-etroca/politica-etroca.component';
 
 const configFirebase = {
   apiKey: "AIzaSyBvWbroFKEazUNgLekqjR29qAl_38P0OAE",
@@ -37,6 +44,10 @@ const configFirebase = {
     CadastroComponent,
     PagamentoComponent,
     HeaderComponent,
+    FooterComponent,
+    QuemSomosComponent,
+    EntregaEfreteComponent,
+    PoliticaEtrocaComponent,
   ],
   imports: [
     CommonModule,
@@ -47,6 +58,8 @@ const configFirebase = {
     ReactiveFormsModule,
     AngularFireAuthModule,
     AngularFireModule.initializeApp(configFirebase),
+    NoopAnimationsModule,
+    MatToolbarModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

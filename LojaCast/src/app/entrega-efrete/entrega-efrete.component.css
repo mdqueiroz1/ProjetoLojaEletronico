@@ -1,0 +1,13 @@
+h1,
+h4 {
+  font-weight: bolder;
+}
+
+.entrega img {
+  width: 720px;
+  height: 540px;
+  background-size: cover;
+}
+.primeiraColuna {
+  margin-top: 5%;
+}
