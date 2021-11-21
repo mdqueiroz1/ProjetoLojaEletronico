@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.d-block {
+  width: 200px;
+  height: 200px;
+  background-size: cover;
+  margin-left: 50px;
+}
+
+.card {
+  width: 18rem !important;
+  height: 24rem;
+  float: left;
+  margin-left: 2%;
+  margin-top: 2%;
+  text-align: center;
+  transition: background 1s;
+  margin-bottom: 2%;
+}
+.card:hover {
+  width: 18rem;
+  height: 24rem;
+  float: left;
+  margin-left: 2%;
+  margin-top: 2%;
+  text-align: center;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+.btn {
+  margin-right: 2%;
+}
+.card-title {
+  font-weight: bolder;
+  font-size: 18px;
+}

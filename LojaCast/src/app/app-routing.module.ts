@@ -9,6 +9,7 @@ import { PagamentoComponent } from './pagamento/pagamento.component';
 import { QuemSomosComponent } from './quem-somos/quem-somos.component';
 import { EntregaEfreteComponent } from './entrega-efrete/entrega-efrete.component';
 import { PoliticaEtrocaComponent } from './politica-etroca/politica-etroca.component';
+import { DescricaoProdutoComponent } from './descricao-produto/descricao-produto.component';
 
 const routes: Routes = [
   {path:'', component:HomeComponent},
@@ -18,6 +19,7 @@ const routes: Routes = [
   {path: 'quemSomos', component:QuemSomosComponent},
   {path: 'entregaEfrete', component:EntregaEfreteComponent},
   {path: 'politicaEtroca', component:PoliticaEtrocaComponent},
+  {path: 'descricaoProduto', component:DescricaoProdutoComponent},
   {path: '**',component:Page404Component},
 ];
 
