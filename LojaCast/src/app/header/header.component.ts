@@ -12,8 +12,6 @@ export class HeaderComponent {
   ngOnInit(): void {
 
   }
-
-
 }
 
 

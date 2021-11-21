@@ -1,5 +1,5 @@
 
-<mat-drawer-container class="example-container">
+<mat-drawer-container class="container-sidebar">
   <mat-drawer #drawer class="campo-sidenav" mode="side">
     <h2>Categorias</h2>
     <p>Hardware</p>
@@ -13,25 +13,34 @@
     <p>Áudio</p>
     <p>SmartHome</p>
   </mat-drawer>
-  <div>
+  <div class="botao-sidenav-div">
     <button class="botao-sidenav" type="button" mat-button (click)="drawer.toggle()">
-      <i class="bi bi-list"></i>
+      <img class="imgIconMenu " src="https://icons.getbootstrap.com/assets/icons/list.svg">
     </button>
   </div>
   <div class="barra-pesquisa-user">
     <div class="container max-width">
       <div class="row align-items-start">
-        <div class="col col3">
-          One of three columns
+        <div class="col-3">
+          <img class="img-icone-loja" src="https://icon-library.com/images/tech-icon-png/tech-icon-png-16.jpg">
         </div>
-        <div class="col">
-          One of three columns
+        <div class="col-6">
+          <div class="container pesquisaCabecalho">
+            <div class="row justify-content-center">
+                <div class="col-4">
+                    <input type="text" class="pesquisaInput" placeholder="Pesquisa">
+                </div>
+                <div class="col-1 pesquisaIcon">
+                    <button class="botao" type="button"><i class="bi bi-search"></i></button>
+                </div>
+            </div>
         </div>
-        <div class="col col3">
+        </div>
+        <div class="col-3">
           One of three columns
         </div>
       </div>
     </div>
   </div>
-
 </mat-drawer-container>
+
