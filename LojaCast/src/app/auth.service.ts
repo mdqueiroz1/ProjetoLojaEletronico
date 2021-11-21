@@ -1,5 +1,8 @@
+import { Message } from '@angular/compiler/src/i18n/i18n_ast';
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
+import { MatSnackBar } from '@angular/material/snack-bar';
+
 
 
 @Injectable({
@@ -8,49 +11,48 @@ import { AngularFireAuth } from '@angular/fire/auth';
 
 export class AuthService {
   authError: any;
-  usuarioLogado:any;
-
-  constructor(public fireBaseAuth: AngularFireAuth) {
+  usuarioLogado: any;
+  msg = "usuário logado com sucesso"
+  constructor(public fireBaseAuth: AngularFireAuth,
+    private snackBar: MatSnackBar) {
     //this.user = fireBaseAuth.authState;
   }
 
-  loginWithEmail(email:string, senha:string) {
+  loginWithEmail(email: string, senha: string) {
 
     let thisService = this;
 
     thisService.authError = null;
 
     this.fireBaseAuth.signInWithEmailAndPassword(email, senha)
-    .then(
-      value => {
-        console.log("usuário logado com sucesso")
-        this.usuarioLogado = this.fireBaseAuth.currentUser
-        localStorage.setItem("id", this.usuarioLogado)
-        window.location.href = "";
-      }
+      .then(
+        value => {
+          console.log(this.msg);
+          window.location.href = "";
+        }
 
-    ).catch((error) => {
-      console.log(error.menssage);
-      thisService.authError = error;
-    })
+      ).catch((error) => {
+        console.log(error.menssage);
+        thisService.authError = error;
+      })
   }
 
-  signUpEmail(email:string, senha:string){
+  signUpEmail(email: string, senha: string) {
     let thisService = this;
 
     thisService.authError = null;
 
-    this.fireBaseAuth.createUserWithEmailAndPassword(email,senha)
-    .then(
-      value=>{
-        console.log("usuário cadastrado com sucesso");
-        window.location.href = "login";
-      }
+    this.fireBaseAuth.createUserWithEmailAndPassword(email, senha)
+      .then(
+        value => {
+          console.log("usuário cadastrado com sucesso");
+          window.location.href = "login";
+        }
 
-    ).catch((error)=>{
-      console.log(error.menssage);
-      thisService.authError = error;
-    })
+      ).catch((error) => {
+        console.log(error.menssage);
+        thisService.authError = error;
+      })
   }
 
 }
