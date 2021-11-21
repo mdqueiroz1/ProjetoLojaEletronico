@@ -1,0 +1,14 @@
+<div class="position-absolute top-50 start-50 translate-middle bg-primary">
+  <div class="form-floating input-email">
+    <input [(ngModel)]="email" type="email" class="form-control" id="floatingInput" placeholder="nome@exemplo.com">
+    <label for="email">Endereço de email</label>
+  </div>
+
+  <div class="form-floating input-senha">
+    <input [(ngModel)]="senha" type="password" class="form-control" id="floatingPassword" placeholder="Password">
+    <label for="floatingPassword">Senha</label>
+  </div>
+
+  <button  (click)="cadastrarLogin()" class="btn  bg-dark text-white"  > Cadastrar</button>
+
+</div>

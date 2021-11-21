@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-login',
@@ -7,9 +9,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  public email: any;
+  public senha: any;
 
-  ngOnInit(): void {
+  constructor(public authService: AuthService) {  }
+
+  ngOnInit(): void {  }
+
+  clickCadastro() {
+    window.location.href = "cadastro";
   }
 
+  clickCadastroGoogle(){
+
+  }
+
+  fazerLogin() {
+    this.authService.loginWithEmail(this.email, this.senha)
+  }
+
+
+
 }
+

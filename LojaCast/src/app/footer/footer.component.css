@@ -1,0 +1,54 @@
+.geral {
+  background-color: orange;
+  height: 170px;
+  display: flex;
+}
+.list-group {
+  /*Usado para tirar os simbolos da lista*/
+  list-style-type: none;
+  
+}
+* a {
+  /*Usado para tirar os simbolos da lista*/
+  color: black;
+  text-decoration: none;
+}
+
+.formaPagamento img {
+  width: 100%;
+  background-size: 100% 100%;
+  margin-bottom: 5%;
+  margin-right: 2%;
+}
+.seguranca img {
+  width: 200px;
+  background-size: 100% 100%;
+  
+}
+
+.logoRedeSocial img {
+  width: 30px;
+  height: 30px;
+  background-size: 100% 100%;
+  margin-bottom: 5%;
+  margin-right: 2%;
+}
+
+.logoAtendimento img,
+.logoSAC img {
+  width: 30px;
+  height: 30px;
+  background-size: 100% 100%;
+}
+#b {
+  margin-left: 10px;
+  color: black;
+}
+#li {
+  margin-bottom: 3%;
+}
+
+h2{
+  font-weight: bolder;
+  color: black;
+}
