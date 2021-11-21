@@ -3,8 +3,6 @@ import { CommonModule } from '@angular/common';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatSidenavModule} from '@angular/material/sidenav';
 
-
-
 @NgModule({
   declarations: [],
   imports: [
@@ -15,4 +13,5 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     MatSidenavModule
   ]
 })
+
 export class AngularMaterialModule { }
