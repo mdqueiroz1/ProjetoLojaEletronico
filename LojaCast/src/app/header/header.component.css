@@ -4,17 +4,31 @@
   --background: orange;
 }
 
-/* !Barra de pesquisa*/
+.corpo-header{
+  width: 100%;
+  margin: 0;
+  padding: 2% 0% 0% 0%;
+  background-color: orange;
+}
 
-.img-icone-loja{
-  width: 30%;
-  margin: 0% 0% 0% 50%;
+.botaoMenuPrincipal{
+  background: none;
+  border: none;
+  margin-top: 70%;
+}
+
+.botaoMenuPrincipal:hover{
+  border-radius: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 
-.barra-pesquisa-user{
-  width: 100%;
-  background-color: orange;
+/* !Barra de pesquisa*/
+
+
+.img-icone-loja{
+  width: 60%;
+  margin: 0% 0% 0% 20%;
 }
 
 .col-4, .col-1{
@@ -23,11 +37,17 @@
 }
 
 .pesquisaInput{
-  width: 130%;
-  padding: 12px 0px 5px 10px;
+  width: 140%;
+  padding: 12px 0px 15px 10px;
   border: none;
   background-color: white;
   border-radius: 8px 0px 0px 8px;
+
+}
+
+.pesquisaInput:focus{
+  margin: none;
+  outline: none;
 }
 
 .pesquisaIcon .botao{
@@ -41,11 +61,12 @@
   border: none;
 }
 
-.col-3{
-  background-color: aqua;
-}
-
 /* ! Area User */
+
+.div-area-user{
+  justify-content: center;
+  margin-top: 4%;
+}
 
 .icone-area-user{
   margin-left: -5%;
@@ -59,4 +80,8 @@
 .opc-menu a{
   text-decoration: none;
   color: black;
+}
+
+.iconeSessaoUser{
+  font-size: 200%;
 }
