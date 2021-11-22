@@ -38,10 +38,10 @@
 
 .pesquisaInput{
   width: 140%;
-  padding: 12px 0px 15px 10px;
+  padding: 7% 0% 5% 5%;
   border: none;
   background-color: white;
-  border-radius: 8px 0px 0px 8px;
+  border-radius: 8px 8px 8px 8px;
 
 }
 
@@ -53,11 +53,10 @@
 .pesquisaIcon .botao{
   width: 100%;
   margin-left: 100%;
-  padding: 12px 0px 5px 0px;
-  background-color: white;
+  padding: 25% 0% 15% 0%;
+  background-color: transparent;
   text-align: center;
   vertical-align: middle;
-  border-radius: 0px 8px 8px 0px;
   border: none;
 }
 

@@ -1,9 +1,6 @@
 import { Message } from '@angular/compiler/src/i18n/i18n_ast';
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
-import { MatSnackBar } from '@angular/material/snack-bar';
-
-
 
 @Injectable({
   providedIn: 'root'
@@ -13,8 +10,8 @@ export class AuthService {
   authError: any;
   usuarioLogado: any;
   msg = "usuário logado com sucesso"
-  constructor(public fireBaseAuth: AngularFireAuth,
-    private snackBar: MatSnackBar) {
+
+  constructor(public fireBaseAuth: AngularFireAuth) {
     //this.user = fireBaseAuth.authState;
   }
 
