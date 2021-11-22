@@ -1,1 +1,30 @@
-<p>pagamento works!</p>
+<app-header></app-header>
+<h2>Olá User</h2>
+
+<mat-stepper orientation="vertical">
+  <mat-step>
+    <ng-template matStepLabel>Dados de entrega</ng-template>
+    <ng-template matStepContent>
+      <p>TODO: API CEP e preenchimento de campos</p>
+      <button mat-button matStepperNext>Próximo</button>
+    </ng-template>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Forma de pagamento</ng-template>
+    <ng-template matStepContent>
+      <p>This content was also rendered lazily</p>
+      <button mat-button matStepperPrevious>Anterior</button>
+      <button mat-button matStepperNext>Próximo</button>
+    </ng-template>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Confirmar pedido</ng-template>
+    <p>This content was rendered eagerly</p>
+    <button mat-button matStepperPrevious>Anterior</button>
+  </mat-step>
+</mat-stepper>
+
+
+
+
+<app-footer></app-footer>
