@@ -7,7 +7,9 @@ import { MatIconModule} from '@angular/material/icon';
 import { MatInputModule} from '@angular/material/input';
 import { MatStepperModule} from '@angular/material/stepper';
 import { MatButtonModule }  from '@angular/material/button';
-import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatOptionModule } from '@angular/material/core';
+import {MatSelectModule} from '@angular/material/select';
 
 @NgModule({
   declarations: [],
@@ -23,6 +25,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     MatButtonModule,
     MatFormFieldModule,
     MatIconModule,
+    MatOptionModule,
+    MatSelectModule,
   ]
 })
 

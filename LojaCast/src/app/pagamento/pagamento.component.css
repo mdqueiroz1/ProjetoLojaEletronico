@@ -1,0 +1,44 @@
+
+.stepper-dados{
+  width: 50%;
+  margin-left: 20%;
+}
+
+.input-endereco-cidade{
+  width: 40%;
+  margin: 0% 5% 5% 0%;
+}
+
+.input-endereco-estado{
+  width: 30%;
+  margin: 0% 5% 5% 0%;
+}
+
+.input-endereco{
+  width: 40%;
+  margin: 0% 5% 5% 0%;
+}
+
+.input-endereco-cep{
+  width: 20%;
+  margin: 0% 0% 5% 0%;
+}
+
+
+.input-endereco-bairro{
+  width: 30%;
+  margin: 0% 5% 5% 0%;
+}
+
+.input-endereco-numero{
+  width: 20%;
+}
+
+.input-endereco-complemento{
+  width: 40%;
+  margin: 0% 5% 5% 0%;
+}
+
+.input-endereco-referencia{
+  width: 40%;
+}
