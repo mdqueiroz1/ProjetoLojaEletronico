@@ -12,9 +12,7 @@ export class GridProdutosComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  descricaoProduto(){
-    window.location.href = "descricaoProduto";
-  }
-
+ 
+  
 }
 

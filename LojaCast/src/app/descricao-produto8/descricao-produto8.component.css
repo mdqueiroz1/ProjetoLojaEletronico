@@ -1,0 +1,71 @@
+* {
+    margin: 0%;
+    padding: 0%;
+  }
+  
+  .carousel {
+    width: 500px;
+    height: 500px;
+  }
+  
+  #preco {
+    font-size: 30px;
+    color: orange;
+    font-weight: bolder;
+  }
+  h1 {
+    font-weight: bolder;
+    margin-top: 2%;
+  }
+  .container {
+    margin-bottom: 2%;
+  }
+  #estoque {
+    color: green;
+  }
+  .colunaComprar {
+    margin-top: 10%;
+    font-size: 18px;
+    
+  }
+  
+  .btn {
+    margin-top: 10%;
+    background-color: orange;
+    color: white;
+    font-weight: bolder;
+    padding: 25px;
+    
+  }
+  
+  .example-card {
+    max-width: 400px;
+  }
+  
+  .example-header-image {
+    background-image: url("https://material.angular.io/assets/img/examples/shiba1.jpg");
+    background-size: cover;
+  }
+  
+  .painel {
+      margin-top: 5%;
+    }
+  
+  .painel2 {
+    margin-top: 2%;
+    margin-bottom: 5%;
+  }
+  .textoDescricao{
+      margin-left: 5%;
+      font-size: 18px;
+      color: black;
+  }
+  
+  #tituloDescricaoProduto{
+      color: black;
+      font-weight: bolder;
+  }
+  #precoPrazo{
+    margin-top: 15%;
+    color: red;
+  }  

@@ -11,6 +11,14 @@ import { EntregaEfreteComponent } from './entrega-efrete/entrega-efrete.componen
 import { PoliticaEtrocaComponent } from './politica-etroca/politica-etroca.component';
 import { DescricaoProdutoComponent } from './descricao-produto/descricao-produto.component';
 import { GridProdutosComponent } from './grid-produtos/grid-produtos.component';
+import { DescricaoProduto2Component } from './descricao-produto2/descricao-produto2.component';
+import { DescricaoProduto3Component } from './descricao-produto3/descricao-produto3.component';
+import { DescricaoProduto4Component } from './descricao-produto4/descricao-produto4.component';
+import { DescricaoProduto5Component } from './descricao-produto5/descricao-produto5.component';
+import { DescricaoProduto6Component } from './descricao-produto6/descricao-produto6.component';
+import { DescricaoProduto7Component } from './descricao-produto7/descricao-produto7.component';
+import { DescricaoProduto8Component } from './descricao-produto8/descricao-produto8.component';
+import { DescricaoProduto9Component } from './descricao-produto9/descricao-produto9.component';
 
 const routes: Routes = [
   {path:'', component:HomeComponent},
@@ -21,6 +29,14 @@ const routes: Routes = [
   {path: 'entregaEfrete', component:EntregaEfreteComponent},
   {path: 'politicaEtroca', component:PoliticaEtrocaComponent},
   {path: 'descricaoProduto', component:DescricaoProdutoComponent},
+  {path: 'descricaoProduto2', component:DescricaoProduto2Component},
+  {path: 'descricaoProduto3', component:DescricaoProduto3Component},
+  {path: 'descricaoProduto4', component:DescricaoProduto4Component},
+  {path: 'descricaoProduto5', component:DescricaoProduto5Component},
+  {path: 'descricaoProduto6', component:DescricaoProduto6Component},
+  {path: 'descricaoProduto7', component:DescricaoProduto7Component},
+  {path: 'descricaoProduto8', component:DescricaoProduto8Component},
+  {path: 'descricaoProduto9', component:DescricaoProduto9Component},
   {path: 'produtos', component:GridProdutosComponent}, /* TODO retirar rota de produtos */
   {path: '**',component:Page404Component},
 ];
