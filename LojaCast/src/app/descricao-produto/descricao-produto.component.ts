@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {MatDialog} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-descricao-produto',
@@ -7,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DescricaoProdutoComponent implements OnInit {
 
+  panelOpenState = false;
+  
   constructor() { }
 
   ngOnInit(): void {

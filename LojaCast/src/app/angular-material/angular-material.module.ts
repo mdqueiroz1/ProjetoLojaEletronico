@@ -5,6 +5,10 @@ import { MatSidenavModule} from '@angular/material/sidenav';
 import { MatMenuModule} from '@angular/material/menu';
 import { MatIconModule} from '@angular/material/icon';
 import { MatInputModule} from '@angular/material/input';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatCardModule} from '@angular/material/card';
+import {MatButtonModule} from '@angular/material/button';
+import {MatDialogModule} from '@angular/material/dialog';
 import { MatStepperModule} from '@angular/material/stepper';
 import { MatButtonModule }  from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -15,18 +19,26 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 
 
+import {MatFormFieldModule} from '@angular/material/form-field';
+
+
+
 @NgModule({
   declarations: [],
   imports: [
-    CommonModule
+    CommonModule,
   ],
   exports:[
     MatSnackBarModule,
     MatSidenavModule,
     MatMenuModule,
+    MatIconModule,
+    MatExpansionModule,
+    MatCardModule,
+     MatButtonModule,
+    MatDialogModule,
     MatInputModule,
     MatStepperModule,
-    MatButtonModule,
     MatFormFieldModule,
     MatIconModule,
     MatOptionModule,
@@ -34,6 +46,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     MatExpansionModule,
     MatDatepickerModule,
     MatCheckboxModule,
+
   ]
 })
 
