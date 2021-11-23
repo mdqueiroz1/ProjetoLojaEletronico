@@ -1,7 +1,6 @@
 <app-header></app-header>
 <h2>Olá User</h2>
 
-
 <mat-stepper class="stepper-dados" orientation="vertical">
   <mat-step>
     <ng-template matStepLabel>Dados de entrega</ng-template>
@@ -27,8 +26,7 @@
 
       <mat-form-field class="input-endereco-cep" appearance="fill">
         <mat-label>CEP</mat-label>
-        <input matInput #CEP maxlength="8" placeholder="00000-000" required>
-        <mat-hint align="end">{{CEP.value.length}} / 8</mat-hint>
+        <input matInput type="number" minlength="8" placeholder="00000-000" [formControl]="cepFormControl" required>
         <mat-error *ngIf="cepFormControl.invalid">O CEP não pode ficar em branco</mat-error>
       </mat-form-field>
 
@@ -47,7 +45,7 @@
 
         <mat-form-field class="input-endereco-numero" appearance="fill">
           <mat-label>Número</mat-label>
-          <input matInput placeholder="Ex. 123" [formControl]="numeroFormControl" required>
+          <input matInput type="number" placeholder="Ex. 123" [formControl]="numeroFormControl" required>
           <mat-error *ngIf="enderecoFormControl.invalid">O número não pode ficar em branco</mat-error>
         </mat-form-field>
 
@@ -61,15 +59,82 @@
           <input matInput placeholder="">
         </mat-form-field>
       </div>
+
+      <section class="checkbox-selection">
+        <mat-checkbox class="example-margin">Usar este endereço para cobrança</mat-checkbox>
+      </section>
+
       <button mat-button matStepperNext>Próximo</button>
     </ng-template>
   </mat-step>
   <mat-step>
     <ng-template matStepLabel>Forma de pagamento</ng-template>
     <ng-template matStepContent>
+      <mat-accordion>
+        <mat-expansion-panel (opened)="panelOpenState = true"
+                             (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Cartão de Crédito
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-form-field class="input-nome-cartao" appearance="fill">
+            <mat-label>Nome</mat-label>
+            <input matInput placeholder="Ex. João da Silva" [formControl]="nomeCartaoFormControl" required>
+            <mat-error *ngIf="nomeCartaoFormControl.invalid">O nome não pode ficar em branco</mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="input-numCartaoDeCredito" appearance="fill">
+            <mat-label>Numero do cartão</mat-label>
+            <input matInput type="number" minlength="8" placeholder="1234 1234 1234 1234" [formControl]="cepFormControl" required>
+            <mat-error *ngIf="cartaoDeCreditoFormControl.invalid">O número do cartão não pode ficar em branco</mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="input-cvcCartaoDeCredito" appearance="fill">
+            <mat-label>CVC</mat-label>
+            <input matInput type="number" minlength="3" placeholder="123" [formControl]="cvcFormControl" required>
+            <mat-error *ngIf="cvcFormControl.invalid">O CVC do cartão não pode ficar em branco</mat-error>
+          </mat-form-field>
+
+          <mat-form-field appearance="fill">
+            <mat-label>Month and Year</mat-label>
+            <input matInput [matDatepicker]="dp" [formControl]="dateFormControl">
+            <mat-datepicker-toggle matSuffix [for]="dp"></mat-datepicker-toggle>
+            <mat-datepicker #dp
+                            startView="multi-year"
+                            (yearSelected)="2021"
+                            (monthSelected)="01"
+                            panelClass="example-month-picker">
+            </mat-datepicker>
+          </mat-form-field>
+
+
+          <button mat-button matStepperNext>Confirmar</button>
+        </mat-expansion-panel>
+        <mat-expansion-panel (opened)="panelOpenState = true"
+                             (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Boleto Bancário
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-form-field class="input-nome-boleto" appearance="fill">
+            <mat-label>Nome</mat-label>
+            <input matInput placeholder="Ex. João da Silva" [formControl]="nomeBoletoFormControl" required>
+            <mat-error *ngIf="nomeBoletoFormControl.invalid">O nome não pode ficar em branco</mat-error>
+          </mat-form-field>
+          <mat-form-field class="input-cpf-boleto" appearance="fill">
+            <mat-label>CPF</mat-label>
+            <input matInput type="number" minlength="11" placeholder="123.456.789-12" [formControl]="cepFormControl" required>
+            <mat-error *ngIf="cpfBoletoFormControl.invalid">O número do CPF não pode ficar em branco</mat-error>
+          </mat-form-field>
+
+          <button mat-button matStepperNext>Confirmar</button>
+        </mat-expansion-panel>
+      </mat-accordion>
 
       <button mat-button matStepperPrevious>Anterior</button>
-      <button mat-button matStepperNext>Próximo</button>
+
     </ng-template>
   </mat-step>
   <mat-step>

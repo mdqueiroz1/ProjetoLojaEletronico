@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormBuilder ,Validators, FormGroup } from '@angular/forms';
+
 import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
 
 interface Estado{
@@ -26,9 +27,17 @@ export class PagamentoComponent implements OnInit {
   bairroFormControl = new FormControl('', [Validators.required, Validators.maxLength(60)]);
   cepFormControl = new FormControl('', [Validators.required, Validators.maxLength(8)]);
   estadoControl = new FormControl('', Validators.required);
+  cartaoDeCreditoFormControl = new FormControl('', Validators.required);
+  cvcFormControl = new FormControl('', Validators.required);
+  cpfBoletoFormControl = new FormControl('', Validators.required);
+  nomeBoletoFormControl = new FormControl('', Validators.required);
+  nomeCartaoFormControl = new FormControl('', Validators.required);
+  dateFormControl = new FormControl('', Validators.required);
+
 
   firstFormGroup!: FormGroup;
   secondFormGroup!: FormGroup;
+  panelOpenState = false;
 
   estados: Estado[] = [
     {nome: "Acre", sigla: "AC"},

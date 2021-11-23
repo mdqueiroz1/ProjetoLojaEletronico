@@ -10,6 +10,10 @@ import { MatButtonModule }  from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatOptionModule } from '@angular/material/core';
 import {MatSelectModule} from '@angular/material/select';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+
 
 @NgModule({
   declarations: [],
@@ -27,6 +31,9 @@ import {MatSelectModule} from '@angular/material/select';
     MatIconModule,
     MatOptionModule,
     MatSelectModule,
+    MatExpansionModule,
+    MatDatepickerModule,
+    MatCheckboxModule,
   ]
 })
 
