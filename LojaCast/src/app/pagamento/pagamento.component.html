@@ -96,18 +96,7 @@
             <mat-error *ngIf="cvcFormControl.invalid">O CVC do cartão não pode ficar em branco</mat-error>
           </mat-form-field>
 
-          <mat-form-field appearance="fill">
-            <mat-label>Month and Year</mat-label>
-            <input matInput [matDatepicker]="dp" [formControl]="dateFormControl">
-            <mat-datepicker-toggle matSuffix [for]="dp"></mat-datepicker-toggle>
-            <mat-datepicker #dp
-                            startView="multi-year"
-                            (yearSelected)="2021"
-                            (monthSelected)="01"
-                            panelClass="example-month-picker">
-            </mat-datepicker>
-          </mat-form-field>
-
+          <!-- TODO adicionar data do cartao, versao angular material dando pau -->
 
           <button mat-button matStepperNext>Confirmar</button>
         </mat-expansion-panel>
