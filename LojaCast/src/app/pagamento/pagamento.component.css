@@ -1,0 +1,86 @@
+/* ! campos endereço*/
+.stepper-dados{
+  width: 50%;
+  margin-left: 20%;
+}
+
+.input-endereco-cidade{
+  width: 40%;
+  margin: 0% 5% 5% 0%;
+}
+
+.input-endereco-estado{
+  width: 30%;
+  margin: 0% 5% 5% 0%;
+}
+
+.input-endereco{
+  width: 40%;
+  margin: 0% 5% 5% 0%;
+}
+
+.input-endereco-cep{
+  width: 20%;
+  margin: 0% 0% 5% 0%;
+}
+
+
+.input-endereco-bairro{
+  width: 30%;
+  margin: 0% 5% 5% 0%;
+}
+
+.input-endereco-numero{
+  width: 20%;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+
+}
+input[type=number] {
+ -moz-appearance: textfield;
+ appearance: textfield;
+
+}
+
+.input-endereco-complemento{
+  width: 40%;
+  margin: 0% 5% 5% 0%;
+}
+
+.input-endereco-referencia{
+  width: 40%;
+}
+
+.checkbox-selection{
+  margin-bottom: 5%;
+}
+
+/* ! campos cartao de credito*/
+.input-nome-cartao{
+  width: 60%;
+}
+
+.input-numCartaoDeCredito{
+  width: 60%;
+
+  margin-right: 40%;
+}
+
+.input-cvcCartaoDeCredito{
+  width: 20%;
+  margin-right: 5%;
+
+}
+
+/* ! campos boleto bancario*/
+.input-nome-boleto{
+  width: 55%;
+  margin-right: 5%;
+}
+
+
+.input-cpf-boleto{
+  width: 40%;
+}

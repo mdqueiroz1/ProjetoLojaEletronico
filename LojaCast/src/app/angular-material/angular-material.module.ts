@@ -10,7 +10,17 @@ import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import {MatDialogModule} from '@angular/material/dialog';
 import { MatStepperModule} from '@angular/material/stepper';
+import { MatButtonModule }  from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatOptionModule } from '@angular/material/core';
+import {MatSelectModule} from '@angular/material/select';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+
+
 import {MatFormFieldModule} from '@angular/material/form-field';
+
 
 
 @NgModule({
@@ -30,6 +40,13 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     MatInputModule,
     MatStepperModule,
     MatFormFieldModule,
+    MatIconModule,
+    MatOptionModule,
+    MatSelectModule,
+    MatExpansionModule,
+    MatDatepickerModule,
+    MatCheckboxModule,
+
   ]
 })
 
