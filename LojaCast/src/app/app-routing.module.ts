@@ -10,7 +10,7 @@ import { QuemSomosComponent } from './quem-somos/quem-somos.component';
 import { EntregaEfreteComponent } from './entrega-efrete/entrega-efrete.component';
 import { PoliticaEtrocaComponent } from './politica-etroca/politica-etroca.component';
 import { DescricaoProdutoComponent } from './descricao-produto/descricao-produto.component';
-import { GridProdutosComponent } from './grid-produtos/grid-produtos.component';
+import { ProdutosComponent } from './produtos/produtos.component';
 import { DescricaoProduto2Component } from './descricao-produto2/descricao-produto2.component';
 import { DescricaoProduto3Component } from './descricao-produto3/descricao-produto3.component';
 import { DescricaoProduto4Component } from './descricao-produto4/descricao-produto4.component';
@@ -37,7 +37,7 @@ const routes: Routes = [
   {path: 'descricaoProduto7', component:DescricaoProduto7Component},
   {path: 'descricaoProduto8', component:DescricaoProduto8Component},
   {path: 'descricaoProduto9', component:DescricaoProduto9Component},
-  {path: 'produtos', component:GridProdutosComponent}, /* TODO retirar rota de produtos */
+  {path: 'produtos', component:ProdutosComponent}, /* TODO retirar rota de produtos */
   {path: '**',component:Page404Component},
 ];
 

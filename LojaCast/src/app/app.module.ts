@@ -32,6 +32,7 @@ import { PagamentoComponent } from './pagamento/pagamento.component';
 import { Page404Component } from './page404/page404.component';
 import { PoliticaEtrocaComponent } from './politica-etroca/politica-etroca.component';
 import { QuemSomosComponent } from './quem-somos/quem-somos.component';
+import { ProdutosComponent } from './produtos/produtos.component';
 
 const configFirebase = {
   apiKey: "AIzaSyBvWbroFKEazUNgLekqjR29qAl_38P0OAE",
@@ -66,6 +67,7 @@ const configFirebase = {
     DescricaoProduto7Component,
     DescricaoProduto8Component,
     DescricaoProduto9Component,
+    ProdutosComponent,
 
   ],
   imports: [

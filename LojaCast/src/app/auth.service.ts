@@ -1,6 +1,6 @@
-import { Message } from '@angular/compiler/src/i18n/i18n_ast';
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
+import { UsuarioService } from './services/usuario.service';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +11,8 @@ export class AuthService {
   usuarioLogado: any;
   msg = "usuário logado com sucesso"
 
-  constructor(public fireBaseAuth: AngularFireAuth) {
+  constructor(private fireBaseAuth: AngularFireAuth,
+              private usuarioService: UsuarioService) {
     //this.user = fireBaseAuth.authState;
   }
 
@@ -27,14 +28,13 @@ export class AuthService {
           console.log(this.msg);
           window.location.href = "";
         }
-
       ).catch((error) => {
         console.log(error.menssage);
         thisService.authError = error;
       })
   }
 
-  signUpEmail(email: string, senha: string) {
+  signUpEmail(email: string, senha: string, nome:string, cpf:number) {
     let thisService = this;
 
     thisService.authError = null;
@@ -43,7 +43,7 @@ export class AuthService {
       .then(
         value => {
           console.log("usuário cadastrado com sucesso");
-          window.location.href = "login";
+          this.usuarioService.incluirUser(nome,email,cpf);
         }
 
       ).catch((error) => {

@@ -1,0 +1,21 @@
+<p>produtos works!</p>
+
+<table>
+  <tr>
+    <td>
+      <p>Nome</p>
+      <input [(ngModel)]="nome" type="text">
+      <p>Descrição</p>
+      <input [(ngModel)]="descricao" type="text">
+      <p>Preço</p>
+      <input [(ngModel)]="preco"  type="number">
+      <p>Desconto</p>
+      <input [(ngModel)]="desconto"  type="number">
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <input (click)='listarProdutos()' type="button" value="Enviar">
+    </td>
+  </tr>
+</table>
