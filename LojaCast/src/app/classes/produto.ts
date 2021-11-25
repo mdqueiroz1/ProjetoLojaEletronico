@@ -1,6 +1,6 @@
 export class Produto {
-  nome!:string;
-  descricao!:string;
-  preco!:number;
-  desconto!:number;
+  nomeProduto!: string;
+  descricaoProduto!: string;
+  precoProduto!: number;
+  descontoProduto!: number;
 }

@@ -9,18 +9,12 @@ import { ProdutoService } from '../services/produto.service';
 })
 export class ProdutosComponent implements OnInit {
 
-  nome!:string;
-  descricao!:string;
-  preco!:number;
-  desconto!:number;
-
-  constructor(public serviceProduto: ProdutoService) { }
+  constructor(private serviceProduto: ProdutoService) { }
 
   ngOnInit(): void {
+
   }
 
-  listarProdutos(){
-    this.serviceProduto.incluirProduto(this.nome, this.descricao, this.preco, this.desconto);
-  }
+
 
 }
