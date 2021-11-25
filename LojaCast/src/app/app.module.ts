@@ -33,6 +33,11 @@ import { Page404Component } from './page404/page404.component';
 import { PoliticaEtrocaComponent } from './politica-etroca/politica-etroca.component';
 import { QuemSomosComponent } from './quem-somos/quem-somos.component';
 import { ProdutosComponent } from './produtos/produtos.component';
+import { UsuarioComponent } from './usuario/usuario/usuario.component';
+import { UsuarioDeleteComponent } from './usuario/usuario-delete/usuario-delete.component';
+import { UsuarioListComponent } from './usuario/usuario-list/usuario-list.component';
+import { UsuarioUpdateComponent } from './usuario/usuario-update/usuario-update.component';
+import { UsuarioDetalhesComponent } from './usuario/usuario-detalhes/usuario-detalhes.component';
 
 const configFirebase = {
   apiKey: "AIzaSyBvWbroFKEazUNgLekqjR29qAl_38P0OAE",
@@ -68,6 +73,11 @@ const configFirebase = {
     DescricaoProduto8Component,
     DescricaoProduto9Component,
     ProdutosComponent,
+    UsuarioComponent,
+    UsuarioDeleteComponent,
+    UsuarioListComponent,
+    UsuarioUpdateComponent,
+    UsuarioDetalhesComponent,
 
   ],
   imports: [
