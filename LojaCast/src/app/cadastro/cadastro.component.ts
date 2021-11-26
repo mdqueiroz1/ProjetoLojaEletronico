@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../auth.service';
-import { FormControl, FormBuilder ,Validators, FormGroup } from '@angular/forms';
-import { Usuario } from '../classes/usuario';
+import { FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-cadastro',

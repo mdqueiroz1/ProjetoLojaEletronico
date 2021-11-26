@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
 
@@ -24,5 +25,7 @@ export class LoginComponent implements OnInit {
   fazerLogin() {
     this.authService.loginWithEmail(this.email, this.senha)
   }
-}
 
+  emailFormControl = new FormControl('', [Validators.required]);
+  senhaFormControl = new FormControl('', [Validators.required]);
+}

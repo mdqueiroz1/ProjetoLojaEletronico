@@ -1,3 +1,4 @@
+<app-header></app-header>
 <div class="container formCadastro">
   <div class="row">
 
@@ -7,11 +8,9 @@
     <div class="col corpo-cadastro">
       <form class="example-form" (ngSubmit)="onSubmit()">
         <div class="tituloCadastro">
-
-          <h2>QUERO ME CADASTRAR</h2>
-
+          <h2>Cadastro</h2>
         </div>
-        <mat-form-field class="input-email-usuario" appearance="fill">
+        <mat-form-field class="input-nome-usuario" appearance="fill">
           <mat-label>Nome</mat-label>
           <input [(ngModel)]="usuario.nome" type="text" matInput placeholder="Nome Completo"
             [formControl]="nomeFormControl" required>
@@ -33,7 +32,7 @@
 
         <mat-form-field class="input-confirmSenha-usuario" appearance="fill">
           <mat-label>Confirme sua senha</mat-label>
-          <input matInput  type="password" placeholder="" [formControl]="confirmSenhaFormControl" required>
+          <input matInput type="password" placeholder="" [formControl]="confirmSenhaFormControl" required>
           <mat-error *ngIf="confirmSenhaFormControl.invalid">A confirmação da senha não pode ficar em branco</mat-error>
         </mat-form-field>
 
@@ -42,13 +41,6 @@
           <input matInput [(ngModel)]="usuario.cpf" placeholder="123.XXX.XXX-XX ou 61.XXX.XXX/XXXX-XX"
             [formControl]="cpfFormControl" required>
           <mat-error *ngIf="cpfFormControl.invalid">O CPF/CNPJ não pode ficar em branco</mat-error>
-        </mat-form-field>
-
-
-        <mat-form-field class="input-endereco-cep" appearance="fill">
-          <mat-label>CEP</mat-label>
-          <input matInput type="number" minlength="8" placeholder="00000-000" [formControl]="cepFormControl" required>
-          <mat-error *ngIf="cepFormControl.invalid">O CEP não pode ficar em branco</mat-error>
         </mat-form-field>
 
         <div class="example-button-row">
