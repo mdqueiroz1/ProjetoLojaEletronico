@@ -24,6 +24,11 @@ import { UsuarioListComponent } from './usuario/usuario-list/usuario-list.compon
 import { UsuarioDeleteComponent } from './usuario/usuario-delete/usuario-delete.component';
 import { UsuarioDetalhesComponent } from './usuario/usuario-detalhes/usuario-detalhes.component';
 import { UsuarioUpdateComponent } from './usuario/usuario-update/usuario-update.component';
+import { ProdutoCreateComponent } from './produtos/produto-create/produto-create.component';
+import { ProdutoListComponent } from './produtos/produto-list/produto-list.component';
+import { ProdutoDeleteComponent } from './produtos/produto-delete/produto-delete.component';
+import { ProdutoUpdateComponent } from './produtos/produto-update/produto-update.component';
+import { ProdutoDetailComponent } from './produtos/produto-detail/produto-detail.component';
 
 const routes: Routes = [
   {path: '', component:HomeComponent},
@@ -47,6 +52,11 @@ const routes: Routes = [
   {path: 'updateUsuario/:id', component:UsuarioUpdateComponent},
   {path: 'detalhaUsuario/:id', component:UsuarioDetalhesComponent},
   {path: 'produtos', component:ProdutosComponent}, /* TODO retirar rota de produtos */
+  {path: 'criarProduto', component:ProdutoCreateComponent},
+  {path: 'listaProduto', component: ProdutoListComponent},
+  {path: 'deleteProduto', component:ProdutoDeleteComponent},
+  {path: 'updateProduto/:id', component:ProdutoUpdateComponent},
+  {path: 'detalhaProduto/:id', component:ProdutoDetailComponent},
   {path: '**',component:Page404Component},
 ];
 

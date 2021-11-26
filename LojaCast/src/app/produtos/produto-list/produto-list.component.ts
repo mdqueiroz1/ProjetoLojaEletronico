@@ -26,11 +26,11 @@ export class ProdutoListComponent implements OnInit {
   }
 
   produtoDetails(id: number){
-    this.router.navigate(['produto-details', id]);
+    this.router.navigate(['detalhaProduto', id]);
   }
 
   updateProduto(id: number){
-    this.router.navigate(['update-produto', id]);
+    this.router.navigate(['updateProduto', id]);
   }
 
   deleteProduto(id: number){
