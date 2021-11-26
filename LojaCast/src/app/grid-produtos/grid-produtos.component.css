@@ -3,7 +3,12 @@
   padding: 0;
 }
 
-.d-block {
+.container{
+  width: 100%;
+  margin-left: 10%;
+}
+
+.card img {
   width: 200px;
   height: 200px;
   background-size: cover;
@@ -12,17 +17,17 @@
 
 .card {
   width: 18rem !important;
-  height: 30rem;
+  height: auto;
   float: left;
   margin-left: 2%;
   margin-top: 2%;
-  
+
   transition: background 1s;
   margin-bottom: 2%;
 }
 .card:hover {
   width: 18rem;
-  height: 30rem;
+  height: auto;
   float: left;
   margin-left: 2%;
   margin-top: 2%;

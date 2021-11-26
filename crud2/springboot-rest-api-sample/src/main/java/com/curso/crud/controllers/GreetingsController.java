@@ -64,6 +64,7 @@ public class GreetingsController {
 		produto.setDescricaoProduto(produtoDetails.getDescricaoProduto());
 		produto.setPrecoProduto(produtoDetails.getPrecoProduto());
 		produto.setDescontoProduto(produtoDetails.getDescontoProduto());
+		produto.setIdImagem(produtoDetails.getIdImagem());
 
 		Produtos updatedProduto = produtosRepository.save(produto);
 		return ResponseEntity.ok(updatedProduto);

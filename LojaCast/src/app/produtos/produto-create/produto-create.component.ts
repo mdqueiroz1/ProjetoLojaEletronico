@@ -26,9 +26,9 @@ export class ProdutoCreateComponent implements OnInit {
   }
 
   goToProdutoList(){
-    this.router.navigate(['/produtos']);
+    this.router.navigate(['/listaProduto']);
   }
-  
+
   onSubmit(){
     console.log(this.produto);
     this.saveProduto();

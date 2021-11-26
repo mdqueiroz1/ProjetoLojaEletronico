@@ -8,7 +8,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Produtos implements Serializable{
+public class Carrinho implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
 
@@ -18,10 +18,8 @@ public class Produtos implements Serializable{
 	
 	private int idImagem;
 	private String nomeProduto;
-	private String descricaoProduto;
 	private double precoProduto;
 	private double descontoProduto;
-	
 	
 	public long getId() {
 		return id;
@@ -29,17 +27,17 @@ public class Produtos implements Serializable{
 	public void setId(long id) {
 		this.id = id;
 	}
+	public int getIdImagem() {
+		return idImagem;
+	}
+	public void setIdImagem(int idImagem) {
+		this.idImagem = idImagem;
+	}
 	public String getNomeProduto() {
 		return nomeProduto;
 	}
 	public void setNomeProduto(String nomeProduto) {
 		this.nomeProduto = nomeProduto;
-	}
-	public String getDescricaoProduto() {
-		return descricaoProduto;
-	}
-	public void setDescricaoProduto(String descricaoProduto) {
-		this.descricaoProduto = descricaoProduto;
 	}
 	public double getPrecoProduto() {
 		return precoProduto;
@@ -53,11 +51,5 @@ public class Produtos implements Serializable{
 	public void setDescontoProduto(double descontoProduto) {
 		this.descontoProduto = descontoProduto;
 	}
-	public int getIdImagem() {
-		return idImagem;
-	}
-	public void setIdImagem(int idImagem) {
-		this.idImagem = idImagem;
-	}
-	
+
 }
