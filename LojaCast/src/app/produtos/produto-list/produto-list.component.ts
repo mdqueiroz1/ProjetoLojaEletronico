@@ -11,6 +11,7 @@ import { ProdutoService } from 'src/app/services/produto.service';
 export class ProdutoListComponent implements OnInit {
 
   produtos!: Produto[];
+  imagem!:any;
 
   constructor(private produtoService: ProdutoService,
     private router: Router) { }

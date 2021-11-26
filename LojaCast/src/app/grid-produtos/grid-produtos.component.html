@@ -1,251 +1,30 @@
-<div class="container">
-  <div class="row">
-    <div class="col-1">
-    </div>
-    <div class="col-10">
-      <div class="card">
-        <a href=descricaoProduto><img src="assets/concordiaRyzen.jpg" class="d-block "></a>
-        <div class="card-body">
-          <h5 class="card-title">PC Gamer Concórdia</h5>
-          <p><s><b>R$ 3.529,90</b></s></p>
-          <p id="precoAtual">R$ 3.129,90</p>
-          <p>À vista no PIX</p>
+<body>
+  <div class="container">
+    <div class="card" *ngFor="let produto of produtos">
+      <a [routerLink]="['/descricao']" routerLinkActive="router-link-active"><img src="../../assets/produto-{{produto.idImagem}}.jpg"></a>
+      <div class="card-body">
+        <h5 class="card-title">{{ produto.nomeProduto }}</h5>
+        <p><s><b>{{ produto.precoProduto }}</b></s></p>
+        <p id="precoAtual"><b>R$ {{produto.precoProduto }}</b></p>
+      <p>À vista no PIX</p>
+      <p class="card-text">{{ produto.descricaoProduto }}</p>
 
-          <p class="card-text">Ryzen 3 3200G, RGB, 8GB DDR4, SSD 240GB, Radeon Vega 8, Fonte 500W, Linux - 31164</p>
+      <div class="container">
+        <div class="row">
 
-          <div class="container">
-            <div class="row">
-
-              <div class="col">
-                <a href="#" class="btn botaoComprar btn-primary">COMPRAR</a>
-              </div>
-              <div class="col">
-                <a href="#" class="btn btn-primary">
-                  <mat-icon>add_shopping_cart</mat-icon>
-                </a>
-              </div>
-            </div>
+          <div class="col">
+            <a href="#" class="btn botaoComprar btn-primary">COMPRAR</a>
+          </div>
+          <div class="col">
+            <a href="#" class="btn btn-primary">
+              <mat-icon>add_shopping_cart</mat-icon>
+            </a>
           </div>
         </div>
       </div>
-      <div class="card">
-        <a href=descricaoProduto2><img src="assets/concordia2.jpg" class="card-img-top" class="d-block "></a>
-        <div class="card-body">
-          <h5 class="card-title">PC Gamer Concórdia</h5>
-
-          <p><s><b>R$ 5.555,44</b></s></p>
-          <p id="precoAtual"><b>R$ 4.399,90</b></p>
-          <p>À vista no PIX</p>
-
-          <p class="card-text">Processador Ryzen 5 3400G, 16GB, SSD 480GB, Fonte 500W, Windows 10 Pro - 40420</p>
-
-          <div class="container">
-            <div class="row">
-
-              <div class="col">
-                <a href="#" class="btn botaoComprar btn-primary">COMPRAR</a>
-              </div>
-              <div class="col">
-                <a href="#" class="btn btn-primary">
-                  <mat-icon>add_shopping_cart</mat-icon>
-                </a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <div class="card">
-        <a href=descricaoProduto3> <img src="assets/NTCVulcano.jpg" class="card-img-top" class="d-block "></a>
-        <div class="card-body">
-          <h5 class="card-title">PC Gamer NTC Vulcano II</h5>
-          <p><s><b>R$ 4.222,11</b></s></p>
-          <p id="precoAtual"><b>R$ 3.434,90</b></p>
-          <p>À vista no PIX</p>
-          <p class="card-text">PC Gamer NTC Vulcano II Intel Core i5-10400, 8GB RAM, SSD 240GB, Linux, Preto - 7159</p>
-
-          <div class="container">
-            <div class="row">
-
-              <div class="col">
-                <a href="#" class="btn botaoComprar btn-primary">COMPRAR</a>
-              </div>
-              <div class="col">
-                <a href="#" class="btn btn-primary">
-                  <mat-icon>add_shopping_cart</mat-icon>
-                </a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <div class="card">
-        <a href=descricaoProduto4><img src="assets/concordia3.jpg" class="card-img-top" class="d-block "></a>
-        <div class="card-body">
-          <h5 class="card-title">PC Gamer Concórdia</h5>
-          <p><s><b>R$ 7.299,89</b></s></p>
-          <p id="precoAtual"><b>R$ 6.299,90</b></p>
-          <p>À vista no PIX</p>
-          <p class="card-text">PC Gamer Concórdia Intel Core i5-9400F, 8GB, 1TB HD, 480GB SSD, Placa de Vídeo RX 550 4GB
-          </p>
-
-          <div class="container">
-            <div class="row">
-
-              <div class="col">
-                <a href="#" class="btn botaoComprar btn-primary">COMPRAR</a>
-              </div>
-              <div class="col">
-                <a href="#" class="btn btn-primary">
-                  <mat-icon>add_shopping_cart</mat-icon>
-                </a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <div class="card">
-        <a href=descricaoProduto5><img src="assets/Skul3000.jpg" class="card-img-top" class="d-block "></a>
-        <div class="card-body">
-          <h5 class="card-title">PC Gamer Skul 3000 </h5>
-          <p><s><b>R$ 4.588,78</b></s></p>
-          <p id="precoAtual"><b>R$ 3.599,90</b></p>
-          <p>À vista no PIX</p>
-          <p class="card-text"> Intel Core i3-9100F, RAM 8GB, SSD 240GB, HD 1TB, PCYes GT1030 2GB, Fonte 500W</p>
-
-          <div class="container">
-            <div class="row">
-
-              <div class="col">
-                <a href="#" class="btn botaoComprar btn-primary">COMPRAR</a>
-              </div>
-              <div class="col">
-                <a href="#" class="btn btn-primary">
-                  <mat-icon>add_shopping_cart</mat-icon>
-                </a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <div class="card">
-        <a href=descricaoProduto6><img src="assets/NTCVulcano II.jpg" class="card-img-top" class="d-block "></a>
-        <div class="card-body">
-          <h5 class="card-title">PC Gamer NTC Vulcano II</h5>
-          <p><s><b>R$ 3.999,89</b></s></p>
-          <p id="precoAtual"><b>R$ 3.199,90</b></p>
-          <p>À vista no PIX</p>
-          <p class="card-text">Powered By Asus 7182 AMD Ryzen 3 3200G, 8GB RAM, SSD 480GB, 500W, Linux</p>
-
-          <div class="container">
-            <div class="row">
-
-              <div class="col">
-                <a href="#" class="btn botaoComprar btn-primary">COMPRAR</a>
-              </div>
-              <div class="col">
-                <a href="#" class="btn btn-primary">
-                  <mat-icon>add_shopping_cart</mat-icon>
-                </a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <div class="card">
-        <a href=descricaoProduto7><img src="assets/Skul5000.jpg" class="card-img-top" class="d-block "></a>
-        <div class="card-body">
-          <h5 class="card-title">Computador Gamer Skul 5000</h5>
-          <p><s><b>R$ 5.555,44</b></s></p>
-          <p id="precoAtual"><b>R$ 4.519,90</b></p>
-          <p>À vista no PIX</p>
-          <p class="card-text">Computador Gamer Skul 5000 i5-9400F, Radeon RX550 4GB, 16GB DDR4, HD 1TB, Linux, Preto
-          </p>
-
-          <div class="container">
-            <div class="row">
-
-              <div class="col">
-                <a href="#" class="btn botaoComprar btn-primary">COMPRAR</a>
-              </div>
-              <div class="col">
-                <a href="#" class="btn btn-primary">
-                  <mat-icon>add_shopping_cart</mat-icon>
-                </a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <div class="card">
-        <a href=descricaoProduto8><img src="../../assets/imgCarousel/produto8/pc1.jpg" class="card-img-top"
-            class="d-block "></a>
-        <div class="card-body">
-          <h5 class="card-title">PC Gamer Gamer Skul 3000</h5>
-          <p><s><b>R$ 3.529,90</b></s></p>
-          <p id="precoAtual"><b>R$ 3.129,90</b></p>
-          <p>À vista no PIX</p>
-          <p class="card-text">PC Gamer Gamer Skul 3000 Intel Core i3-10100F, RAM 8GB, SSD 240GB, HD 1TB, PCYes GT1030
-            2GB, Fonte</p>
-
-          <div class="container">
-            <div class="row">
-
-              <div class="col">
-                <a href="#" class="btn botaoComprar btn-primary">COMPRAR</a>
-              </div>
-              <div class="col">
-                <a href="#" class="btn btn-primary">
-                  <mat-icon>add_shopping_cart</mat-icon>
-                </a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <div class="card">
-        <a href=descricaoProduto9><img src="../../assets/imgCarousel/produto9/pc1.jpg" class="card-img-top"
-            class="d-block "></a>
-        <div class="card-body">
-          <h5 class="card-title">PC Gamer OnPress Powered</h5>
-          <p><s><b>R$ 3.529,90</b></s></p>
-          <p id="precoAtual"><b>R$ 3.129,90</b></p>
-          <p>À vista no PIX</p>
-          <p class="card-text">PC Gamer OnPress Powered By Asus i5 9600KF, RGB, GTX 1650 4GB, 16GB DDR4, SSD 480GB,
-            Linux, Preto</p>
-
-          <div class="container">
-            <div class="row">
-
-              <div class="col">
-                <a href="#" class="btn botaoComprar btn-primary">COMPRAR</a>
-              </div>
-              <div class="col">
-                <a href="#" class="btn btn-primary">
-                  <mat-icon id="botaoCarrinho">add_shopping_cart</mat-icon>
-                </a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-    <div class="col-1">
     </div>
   </div>
 </div>
+</body>
+
 <app-footer></app-footer>

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Produto } from '../classes/produto';
+import { ProdutoListComponent } from '../produtos/produto-list/produto-list.component';
+import { ProdutoService } from '../services/produto.service';
 
 @Component({
   selector: 'app-grid-produtos',
@@ -7,12 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GridProdutosComponent implements OnInit {
 
-  constructor() { }
+  produtos!: Produto[];
+
+  constructor(private produtoService:ProdutoService) { }
 
   ngOnInit(): void {
+    this.getProdutos();
   }
 
- 
-  
+  getProdutos(){
+    this.produtoService.getListaProduto().subscribe(data => {
+      this.produtos = data;
+    });
+  }
 }
 

@@ -12,6 +12,7 @@ export class ProdutoDetailComponent implements OnInit {
 
   id!: number;
   produto!: Produto;
+  imagem!:any;
   constructor(private route: ActivatedRoute, private produtoService: ProdutoService) { }
 
   ngOnInit(): void {
@@ -20,7 +21,7 @@ export class ProdutoDetailComponent implements OnInit {
     this.produto = new Produto();
     this.produtoService.getProdutoById(this.id).subscribe(data => {
       this.produto = data;
+      this.imagem = `../../../assets/produto-${this.produto.idImagem}.jpg`
     });
   }
-
 }
