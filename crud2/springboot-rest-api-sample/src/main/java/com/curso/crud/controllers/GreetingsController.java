@@ -9,18 +9,18 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.curso.crud.exception.ResourceNotFoundException;
 import com.curso.crud.model.Produtos;
 import com.curso.crud.model.Usuario;
 import com.curso.crud.repository.ProdutosRepository;
 import com.curso.crud.repository.UsuarioRepository;
-import com.curso.crud.exception.ResourceNotFoundException;
 
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
