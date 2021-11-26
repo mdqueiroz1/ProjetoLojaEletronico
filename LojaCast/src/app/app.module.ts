@@ -43,6 +43,7 @@ import { ProdutoDeleteComponent } from './produtos/produto-delete/produto-delete
 import { ProdutoCreateComponent } from './produtos/produto-create/produto-create.component';
 import { ProdutoListComponent } from './produtos/produto-list/produto-list.component';
 import { ProdutoUpdateComponent } from './produtos/produto-update/produto-update.component';
+import { ProdutoDetailComponent } from './produtos/produto-detail/produto-detail.component';
 
 
 const configFirebase = {
@@ -89,6 +90,7 @@ const configFirebase = {
     ProdutoCreateComponent,
     ProdutoListComponent,
     ProdutoUpdateComponent,
+    ProdutoDetailComponent,
   ],
   imports: [
     CommonModule,
