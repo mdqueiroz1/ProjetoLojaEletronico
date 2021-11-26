@@ -1,0 +1,74 @@
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+  color: black;
+  padding-bottom: 20px;
+  border-radius: 10px;
+  margin-bottom: 10%;
+  background-color: rgba(255, 165, 0, 0.5);
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.tituloCadastro {
+  text-align: center;
+  vertical-align: middle;
+  font-weight: bolder;
+  color: black;
+  border-bottom: 2px solid black;
+  background-color: rgba(255, 165, 0, 0.8);
+  border-radius: 10px 10px 0px 0px;
+}
+
+.input-email-usuario,
+.input-senha-usuario,
+.input-confirmSenha-usuario,
+.input-cpf-usuario,
+.input-nome-usuario,
+.input-endereco-cep {
+  width: 80%;
+  margin:5% 0% 0% 10%;
+
+}
+
+.formCadastro {
+  margin-top: 5%;
+
+}
+
+.example-button-row button,
+.example-button-row a {
+  margin-right: 8px;
+  border-radius: 10px;
+
+}
+
+.corpo-cadastro {
+  padding: 40px 0px 20px 0px;
+  border-radius: 10px;
+
+}
+
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+
+}
+
+input[type=number] {
+ -moz-appearance: textfield;
+ appearance: textfield;
+
+}
+
+.example-button-row{
+ text-align: center;
+
+}
+
+button{
+  background-color: orange;
+  font-weight: bolder;
+}

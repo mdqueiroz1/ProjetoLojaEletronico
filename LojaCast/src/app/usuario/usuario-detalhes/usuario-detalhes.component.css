@@ -1,0 +1,8 @@
+.card-detalhes-usuario{
+  width: 80%;
+  margin: 5% 0% 0% 10%;
+}
+
+.card-detalhes-usuario label{
+  margin-bottom: 10px;
+}

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -8,11 +8,24 @@ import { RouterLink } from '@angular/router';
 })
 export class HeaderComponent {
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
 
   }
+
+  goToLogin(){
+    this.router.navigate(['/login']);
+  }
+
+  goToCadastro(){
+    this.router.navigate(['/criarUsuario']);
+  }
+
+  goToHome(){
+    this.router.navigate(['']);
+  }
+
 }
 
 

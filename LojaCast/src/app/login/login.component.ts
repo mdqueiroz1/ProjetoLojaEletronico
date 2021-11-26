@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
 
@@ -12,23 +13,19 @@ export class LoginComponent implements OnInit {
   public email: any;
   public senha: any;
 
-  constructor(public authService: AuthService) {  }
+  constructor(private authService: AuthService,
+              private router:Router) {  }
 
   ngOnInit(): void {  }
 
   clickCadastro() {
-    window.location.href = "cadastro";
-  }
-
-  clickCadastroGoogle(){
-
+    this.router.navigate(['/criarUsuario'])
   }
 
   fazerLogin() {
     this.authService.loginWithEmail(this.email, this.senha)
   }
 
-
-
+  emailFormControl = new FormControl('', [Validators.required]);
+  senhaFormControl = new FormControl('', [Validators.required]);
 }
-

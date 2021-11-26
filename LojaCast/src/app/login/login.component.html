@@ -1,29 +1,32 @@
 <app-header></app-header>
 
 <div class="container">
-  <div class="row">
-    <div class="col-4">
+  <div class="corpo-login">
+    <div class="titulo-login">
+      <h2>Login</h2>
     </div>
+    <div class="div-login">
+      <div class="form-floating input-email">
+        <mat-form-field class="input-email-usuario" appearance="fill">
+          <mat-label>E-mail</mat-label>
+          <input [(ngModel)]="email" type="email" matInput placeholder="Ex. pat@example.com"
+            [formControl]="emailFormControl" required>
+          <mat-error *ngIf="emailFormControl.invalid">O e-mail não pode ficar em branco</mat-error>
+        </mat-form-field>
+      </div>
 
-    <div class="col-4 corpo-login">
-        <div class="div-login">
-          <div class="form-floating input-email">
-            <input [(ngModel)]="email" type="email" class="form-control" id="floatingInput" placeholder="nome@exemplo.com">
-            <label for="email">Endereço de email</label>
-          </div>
+      <div class="form-floating input-senha">
+        <mat-form-field class="input-senha-usuario" appearance="fill">
+          <mat-label>Senha de acesso</mat-label>
+          <input [(ngModel)]="senha" type="password" matInput placeholder="" [formControl]="senhaFormControl" required>
+          <mat-error *ngIf="senhaFormControl.invalid">A senha não pode ficar em branco</mat-error>
+        </mat-form-field>
+      </div>
 
-          <div class="form-floating input-senha">
-            <input [(ngModel)]="senha" type="password" class="form-control" id="floatingPassword" placeholder="Senha">
-            <label for="floatingPassword">Senha</label>
-          </div>
-
-          <button (click)="fazerLogin()" class="btn  bg-dark text-white"> Acessar</button>
-          <button (click)="clickCadastro()" class="btn bg-dark text-white">Cadastrar</button>
-        </div>
-    </div>
-    
-    <div class="col-4">
+      <button (click)="fazerLogin()" class="btn rounded-pill"> Acessar</button>
+      <button (click)="clickCadastro()" class="btn rounded-pill">Cadastrar</button>
     </div>
   </div>
 </div>
+
 <app-footer></app-footer>

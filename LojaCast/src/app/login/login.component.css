@@ -3,16 +3,33 @@
   padding: 0%;
 }
 
+.input-email-usuario,
+.input-senha-usuario{
+  width: 100%;
+}
+
 .corpo-login{
-  margin: 10% 0% 10% 0%;
+  width: 40%;
+
+  margin: 5% 0% 5% 30%;
+}
+
+.titulo-login{
+  text-align: center;
+  vertical-align: middle;
+  font-weight: bolder;
+  color: black;
+  border-bottom: 2px solid black;
+  background-color: rgba(255, 165, 0, 0.8);
+  border-radius: 10px 10px 0px 0px;
 }
 
 .div-login{
   width: 100%;
   height: auto;
-  background-color: orange;
   padding: 40px 0px 20px 0px;
-  border-radius: 10px;
+  border-radius: 0px 0px 10px 10px;
+  background-color: rgba(255, 165, 0, 0.5);
 }
 
 .form-floating{
@@ -23,7 +40,10 @@
 }
 
 .btn{
-  width: 60%;
-  margin-left: 20%;
+  width: 50%;
+  margin-left: 25%;
   margin-bottom: 5%;
+  background-color: orange;
+  font-weight: bolder;
+
 }

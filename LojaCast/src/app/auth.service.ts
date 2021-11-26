@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
-import { UsuarioService } from './services/usuario.service';
 
 @Injectable({
   providedIn: 'root'
@@ -11,8 +10,9 @@ export class AuthService {
   usuarioLogado: any;
   msg = "usuário logado com sucesso"
 
-  constructor(private fireBaseAuth: AngularFireAuth,
-              private usuarioService: UsuarioService) {
+
+
+  constructor(private fireBaseAuth: AngularFireAuth) {
     //this.user = fireBaseAuth.authState;
   }
 
@@ -34,7 +34,7 @@ export class AuthService {
       })
   }
 
-  signUpEmail(email: string, senha: string, nome:string, cpf:number) {
+  signUpEmail(email:string, senha: string) {
     let thisService = this;
 
     thisService.authError = null;
@@ -42,8 +42,7 @@ export class AuthService {
     this.fireBaseAuth.createUserWithEmailAndPassword(email, senha)
       .then(
         value => {
-          console.log("usuário cadastrado com sucesso");
-          this.usuarioService.incluirUser(nome,email,cpf);
+          console.log("usuário cadastrado no firebase com sucesso");
         }
 
       ).catch((error) => {
@@ -51,5 +50,4 @@ export class AuthService {
         thisService.authError = error;
       })
   }
-
 }

@@ -1,1 +1,20 @@
-<p>usuario-update works!</p>
+
+<mat-card class="card-update-usuario">
+  <mat-card-title>Update Usuário</mat-card-title>
+  <div class="form-group">
+    <label> Nome </label>
+    <input type="text" class="form-control" id="firstName" [(ngModel)]="usuario.nome" name="firstName">
+  </div>
+
+  <div class="form-group">
+    <label> CPF </label>
+    <input type="text" class="form-control" id="lastName" [(ngModel)]="usuario.cpf" name="lastName">
+  </div>
+
+  <div class="form-group">
+    <label> Email </label>
+    <input type="text" class="form-control" id="emailId" [(ngModel)]="usuario.email" name="emailId">
+  </div>
+  <br />
+  <button class="btn" type="submit">Submit</button>
+</mat-card>

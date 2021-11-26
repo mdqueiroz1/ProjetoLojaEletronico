@@ -38,10 +38,12 @@ import { UsuarioDeleteComponent } from './usuario/usuario-delete/usuario-delete.
 import { UsuarioListComponent } from './usuario/usuario-list/usuario-list.component';
 import { UsuarioUpdateComponent } from './usuario/usuario-update/usuario-update.component';
 import { UsuarioDetalhesComponent } from './usuario/usuario-detalhes/usuario-detalhes.component';
+import { UsuarioCreateComponent } from './usuario/usuario-create/usuario-create.component';
 import { ProdutoDeleteComponent } from './produtos/produto-delete/produto-delete.component';
 import { ProdutoCreateComponent } from './produtos/produto-create/produto-create.component';
 import { ProdutoListComponent } from './produtos/produto-list/produto-list.component';
 import { ProdutoUpdateComponent } from './produtos/produto-update/produto-update.component';
+
 
 const configFirebase = {
   apiKey: "AIzaSyBvWbroFKEazUNgLekqjR29qAl_38P0OAE",
@@ -82,11 +84,11 @@ const configFirebase = {
     UsuarioListComponent,
     UsuarioUpdateComponent,
     UsuarioDetalhesComponent,
+    UsuarioCreateComponent,
     ProdutoDeleteComponent,
     ProdutoCreateComponent,
     ProdutoListComponent,
     ProdutoUpdateComponent,
-
   ],
   imports: [
     CommonModule,

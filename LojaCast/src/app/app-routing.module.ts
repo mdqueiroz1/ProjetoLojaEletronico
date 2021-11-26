@@ -19,12 +19,16 @@ import { DescricaoProduto6Component } from './descricao-produto6/descricao-produ
 import { DescricaoProduto7Component } from './descricao-produto7/descricao-produto7.component';
 import { DescricaoProduto8Component } from './descricao-produto8/descricao-produto8.component';
 import { DescricaoProduto9Component } from './descricao-produto9/descricao-produto9.component';
+import { UsuarioCreateComponent } from './usuario/usuario-create/usuario-create.component';
+import { UsuarioListComponent } from './usuario/usuario-list/usuario-list.component';
+import { UsuarioDeleteComponent } from './usuario/usuario-delete/usuario-delete.component';
+import { UsuarioDetalhesComponent } from './usuario/usuario-detalhes/usuario-detalhes.component';
+import { UsuarioUpdateComponent } from './usuario/usuario-update/usuario-update.component';
 
 const routes: Routes = [
-  {path:'', component:HomeComponent},
-  {path:'login', component:LoginComponent},
-  {path:'cadastro', component:CadastroComponent},
-  {path:'pagamento', component:PagamentoComponent},
+  {path: '', component:HomeComponent},
+  {path: 'login', component:LoginComponent},
+  {path: 'pagamento', component:PagamentoComponent},
   {path: 'quemSomos', component:QuemSomosComponent},
   {path: 'entregaEfrete', component:EntregaEfreteComponent},
   {path: 'politicaEtroca', component:PoliticaEtrocaComponent},
@@ -37,6 +41,11 @@ const routes: Routes = [
   {path: 'descricaoProduto7', component:DescricaoProduto7Component},
   {path: 'descricaoProduto8', component:DescricaoProduto8Component},
   {path: 'descricaoProduto9', component:DescricaoProduto9Component},
+  {path: 'criarUsuario', component:UsuarioCreateComponent},
+  {path: 'listaUsuario', component:UsuarioListComponent},
+  {path: 'deletaUsuario', component:UsuarioDeleteComponent},
+  {path: 'updateUsuario/:id', component:UsuarioUpdateComponent},
+  {path: 'detalhaUsuario/:id', component:UsuarioDetalhesComponent},
   {path: 'produtos', component:ProdutosComponent}, /* TODO retirar rota de produtos */
   {path: '**',component:Page404Component},
 ];
