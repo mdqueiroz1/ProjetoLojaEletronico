@@ -1,0 +1,70 @@
+.container{
+  width: 100%;
+  margin: 5% 0% 5% 10%;
+  align-self: center;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+
+}
+
+input[type=number] {
+ -moz-appearance: textfield;
+ appearance: textfield;
+
+}
+
+.foto-produto img{
+  margin-left: 30%;
+  width: 80px;
+  height: 80px;
+}
+
+.descricao-produto{
+  margin-left: 15px;
+  align-self: center;
+}
+
+.row{
+  padding: 2%;
+}
+
+.frete-container{
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.btn{
+  background-color: orange;
+  margin: 0% 0% 0% 1%;
+}
+
+.link-cep{
+  text-decoration: none;
+  color: orange;
+  margin-left: 20px;
+}
+
+.valor-produto{
+  text-align: center;
+  align-self: center;
+}
+
+.input-qnt{
+  width: 20%;
+}
+
+.icon-qnt{
+  margin: 0% 1% 0% 1%;
+}
+
+.col-2{
+  align-self: center;
+}
+
+.valor-final{
+  float: right;
+  margin-right: 50px;
+}

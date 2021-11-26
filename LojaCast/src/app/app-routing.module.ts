@@ -24,6 +24,7 @@ import { UsuarioListComponent } from './usuario/usuario-list/usuario-list.compon
 import { UsuarioDeleteComponent } from './usuario/usuario-delete/usuario-delete.component';
 import { UsuarioDetalhesComponent } from './usuario/usuario-detalhes/usuario-detalhes.component';
 import { UsuarioUpdateComponent } from './usuario/usuario-update/usuario-update.component';
+import { CarrinhoComponent } from './carrinho/carrinho.component';
 
 const routes: Routes = [
   {path: '', component:HomeComponent},
@@ -46,6 +47,7 @@ const routes: Routes = [
   {path: 'deletaUsuario', component:UsuarioDeleteComponent},
   {path: 'updateUsuario/:id', component:UsuarioUpdateComponent},
   {path: 'detalhaUsuario/:id', component:UsuarioDetalhesComponent},
+  {path: 'carrinho', component: CarrinhoComponent},
   {path: 'produtos', component:ProdutosComponent}, /* TODO retirar rota de produtos */
   {path: '**',component:Page404Component},
 ];
