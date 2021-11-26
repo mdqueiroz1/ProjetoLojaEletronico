@@ -29,6 +29,7 @@ import { ProdutoListComponent } from './produtos/produto-list/produto-list.compo
 import { ProdutoDeleteComponent } from './produtos/produto-delete/produto-delete.component';
 import { ProdutoUpdateComponent } from './produtos/produto-update/produto-update.component';
 import { ProdutoDetailComponent } from './produtos/produto-detail/produto-detail.component';
+import { CarrinhoComponent } from './carrinho/carrinho.component';
 
 const routes: Routes = [
   {path: '', component:HomeComponent},
@@ -51,6 +52,7 @@ const routes: Routes = [
   {path: 'deletaUsuario', component:UsuarioDeleteComponent},
   {path: 'updateUsuario/:id', component:UsuarioUpdateComponent},
   {path: 'detalhaUsuario/:id', component:UsuarioDetalhesComponent},
+  {path: 'carrinho', component: CarrinhoComponent},
   {path: 'produtos', component:ProdutosComponent}, /* TODO retirar rota de produtos */
   {path: 'criarProduto', component:ProdutoCreateComponent},
   {path: 'listaProduto', component: ProdutoListComponent},

@@ -44,6 +44,7 @@ import { ProdutoCreateComponent } from './produtos/produto-create/produto-create
 import { ProdutoListComponent } from './produtos/produto-list/produto-list.component';
 import { ProdutoUpdateComponent } from './produtos/produto-update/produto-update.component';
 import { ProdutoDetailComponent } from './produtos/produto-detail/produto-detail.component';
+import { CarrinhoComponent } from './carrinho/carrinho.component';
 
 
 const configFirebase = {
@@ -91,6 +92,7 @@ const configFirebase = {
     ProdutoListComponent,
     ProdutoUpdateComponent,
     ProdutoDetailComponent,
+    CarrinhoComponent,
   ],
   imports: [
     CommonModule,
