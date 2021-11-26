@@ -41,7 +41,7 @@
 
         </div>
         <div class="col-2">
-          <img class="img-icone-loja" src="https://icon-library.com/images/tech-icon-png/tech-icon-png-16.jpg">
+          <a><img class="img-icone-loja" src="https://icon-library.com/images/tech-icon-png/tech-icon-png-16.jpg" (click)="goToHome()"></a>
         </div>
         <div class="col-6">
           <div class="container pesquisaCabecalho">
@@ -63,13 +63,13 @@
                   <mat-icon class="iconeSessaoUser" >account_circle</mat-icon>
                 </button>
                 <mat-menu #menuUser="matMenu">
-                  <button class="opc-menu" mat-menu-item>
+                  <button class="opc-menu" mat-menu-item (click)="goToLogin()">
                     <mat-icon>login</mat-icon>
-                    <span><a routerLink= "/login" routerLinkActive="router-link-active" >Login</a></span>
+                    <span> Login </span>
                   </button>
-                  <button class="opc-menu" mat-menu-item>
+                  <button class="opc-menu" mat-menu-item (click)="goToCadastro()">
                     <mat-icon>person_add</mat-icon>
-                    <span><a routerLink= "/cadastro" routerLinkActive="router-link-active">Cadastrar</a></span>
+                    <span>Cadastrar</span>
                   </button>
                 </mat-menu>
               </div>

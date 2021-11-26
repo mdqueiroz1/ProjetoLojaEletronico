@@ -12,23 +12,17 @@ export class LoginComponent implements OnInit {
   public email: any;
   public senha: any;
 
-  constructor(public authService: AuthService) {  }
+  constructor(private authService: AuthService,
+              private router:Router) {  }
 
   ngOnInit(): void {  }
 
   clickCadastro() {
-    window.location.href = "cadastro";
-  }
-
-  clickCadastroGoogle(){
-
+    this.router.navigate(['/criarUsuario'])
   }
 
   fazerLogin() {
     this.authService.loginWithEmail(this.email, this.senha)
   }
-
-
-
 }
 
