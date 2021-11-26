@@ -1,1 +1,40 @@
-<p>produto-create works!</p>
+<div class="row">
+    <div class="card col-md-6 offset-md-3 offset-md-3">
+        <div class="row">
+            <h3 class="text-center"> Create Produto </h3>
+            <hr />
+            <div class="card-body">
+                <form (ngSubmit)="onSubmit()">
+
+                    <div class="form-group">
+                        <label> Nome Produto</label>
+                        <input type="text" class="form-control" id="nomeProduto" [(ngModel)]="produto.nomeProduto"
+                            name="nomeProduto">
+                    </div>
+
+                    <div class="form-group">
+                        <label> Descrição Produto</label>
+                        <input type="text" class="form-control" id="descricaoProduto" [(ngModel)]="produto.descricaoProduto"
+                            name="descricaoProduto">
+                    </div>
+
+                    <div class="form-group">
+                        <label> Preço Produto</label>
+                        <input type="text" class="form-control" id="precoProduto" [(ngModel)]="produto.precoProduto"
+                            name="precoProduto">
+                    </div>
+
+                    <div class="form-group">
+                        <label> Desconto Produto</label>
+                        <input type="text" class="form-control" id="descontoProduto" [(ngModel)]="produto.descontoProduto"
+                            name="descontoProduto">
+                    </div>
+
+                    <br />
+                    <button class="btn btn-success" type="submit">Submit</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
