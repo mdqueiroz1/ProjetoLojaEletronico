@@ -1,20 +1,19 @@
 <mat-card class="card-detalhes-produto">
-    <mat-card-title>Detalhes do Produto</mat-card-title>
+    <div class="div-tittle">
+        <mat-card-title class="tittle">Detalhes do Produto</mat-card-title>
+    </div>
     <div>
         <div>
-          <label> <b> Imagem </b></label> <img src={{imagem}}>
+            <label> <b> Nome: </b></label> {{produto.nomeProduto}}
         </div>
         <div>
-            <label> <b> Nome Produto: </b></label> {{produto.nomeProduto}}
+            <label> <b> Descrição: </b></label> {{produto.descricaoProduto}}
         </div>
         <div>
-            <label> <b> Descrição Produto: </b></label> {{produto.descricaoProduto}}
+            <label> <b> Preço: </b></label> {{produto.precoProduto}}
         </div>
         <div>
-            <label> <b> Preço Produto: </b></label> {{produto.precoProduto}}
-        </div>
-        <div>
-            <label> <b> Desconto Produto: </b></label> {{produto.descontoProduto}}
+            <label> <b> Desconto: </b></label> {{produto.descontoProduto}}
         </div>
     </div>
 </mat-card>

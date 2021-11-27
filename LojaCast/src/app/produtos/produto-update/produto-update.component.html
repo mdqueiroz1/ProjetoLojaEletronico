@@ -1,26 +1,41 @@
+<mat-card class="card-update-produto">
 
-<mat-card class="card-update-usuario">
-    <mat-card-title>Update Produto</mat-card-title>
-    <div class="form-group">
-      <label> Nome Produto </label>
-      <input type="text" class="form-control" id="nomeProduto" [(ngModel)]="produto.nomeProduto" name="nomeProduto">
-    </div>
-  
-    <div class="form-group">
-      <label> Descrição Produto </label>
-      <input type="text" class="form-control" id="descricaoProduto" [(ngModel)]="produto.descricaoProduto" name="descricaoProduto">
-    </div>
+  <div class="div-tittle">
+    <mat-card-title class="tittle">Editar Produto</mat-card-title>
+  </div>
+  <div class="form-group">
+    <label> Nome </label>
+    <input type="text" class="form-control" id="nomeProduto" [(ngModel)]="produto.nomeProduto" name="nomeProduto">
+  </div>
 
-    <div class="form-group">
-        <label> Preço Produto </label>
-        <input type="text" class="form-control" id="precoProduto" [(ngModel)]="produto.precoProduto" name="precoProduto">
+  <div class="form-group">
+    <label> Descrição </label>
+    <input type="text" class="form-control" id="descricaoProduto" [(ngModel)]="produto.descricaoProduto"
+      name="descricaoProduto">
+  </div>
+
+  <div class="form-group">
+    <label> Preço  </label>
+    <input type="text" class="form-control" id="precoProduto" [(ngModel)]="produto.precoProduto" name="precoProduto">
+  </div>
+
+  <div class="form-group">
+    <label> Desconto  </label>
+    <input type="text" class="form-control" id="descontoProduto" [(ngModel)]="produto.descontoProduto"
+      name="descontoProduto">
+  </div>
+  <br />
+  <div class="container">
+    <div class="row">
+      <div class="col-2">
+
       </div>
-  
-    <div class="form-group">
-      <label> Desconto Produto </label>
-      <input type="text" class="form-control" id="descontoProduto" [(ngModel)]="produto.descontoProduto" name="descontoProduto">
+      <div class="col-4 ">
+        <button class="btn " type="submit">Editar</button>
+      </div>
+      <div class="co-2">
+
+      </div>
     </div>
-    <br/>
-    <button class="btn" type="submit">Submit</button>
-  </mat-card>
-  
+  </div>
+</mat-card>
