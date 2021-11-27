@@ -1,0 +1,74 @@
+
+.container{
+    margin: 0%;
+  }
+  
+  .card-criar-produto {
+    width: 80%;
+    margin: 5% 0% 0% 10%;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
+  }
+  
+  .div-tittle {
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: orange;
+    border: 2px solid black;
+  }
+  .row {
+    --bs-gutter-x: 0%;
+  
+  }
+  
+  
+  .tittle {
+    font-weight: bold;
+    
+  }
+  
+  label {
+    margin-left: 2%;
+    
+    font-size: 17px;
+    width: 95%;
+  }
+  input{
+    margin-left: 2%;
+    margin-top: 1%;
+    width: 95%;
+    border-radius: 10px;
+  }
+  
+  .form-group {
+    color: black;
+    font-size: 17px;
+    margin-top: 2%;
+    font-weight: bold;
+  }
+  
+  
+  .btn {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    background-color: orange;
+    width: 200%;
+    border: 2px solid black;
+    transition: background 1s;
+  
+    border-radius: 10px;
+  }
+  
+  .btn:hover {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    background-color: orange;
+    width: 200%;
+    border: 2px solid black;
+    border-radius: 10px;
+  }
+  
