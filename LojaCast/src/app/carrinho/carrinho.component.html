@@ -13,8 +13,11 @@
               <img src="../../assets/produto-{{ item.idImagem }}.jpg">
             </div>
           </div>
-          <div class="col-6 descricao-produto">
+          <div class="col-5 descricao-produto">
             {{ item.nomeProduto }}
+          </div>
+          <div class="col-1 excluir-produto">
+            <a (click)="deleteCarrinho(item.id)">Excluir</a>
           </div>
           <div class="col-2">
             <mat-icon class="icon-qnt">expand_more</mat-icon>
@@ -56,10 +59,10 @@
       <div class="col-6 total-produtos">
         <hr>
         <b>Total Produtos</b>
-        <b class=valor-final>R$</b>
+        <b class=valor-produtos>R$ </b>
         <hr>
         <b>Total Frete</b>
-        <b class=valor-final>R$</b>
+        <b class=valor-frete>R$</b>
         <hr>
         <b>Total</b>
         <b class="valor-final">R$</b>

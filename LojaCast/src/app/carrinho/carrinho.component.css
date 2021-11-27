@@ -17,6 +17,12 @@ input[type=number] {
 
 }
 
+.excluir-produto{
+  text-decoration: solid;
+  align-self: center;
+  color: red;
+}
+
 .foto-produto img{
   margin-left: 30%;
   width: 80px;
@@ -68,6 +74,8 @@ input[type=number] {
   align-self: center;
 }
 
+.valor-frete,
+.valor-produtos,
 .valor-final{
   float: right;
   margin-right: 50px;

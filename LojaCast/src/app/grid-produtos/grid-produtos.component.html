@@ -13,10 +13,10 @@
         <div class="row">
 
           <div class="col">
-            <a href="#" class="btn botaoComprar btn-primary">COMPRAR</a>
+            <a class="btn botaoComprar btn-primary" (click)="comprarProduto(produto.id)">COMPRAR</a>
           </div>
           <div class="col">
-            <a href="#" class="btn btn-primary">
+            <a class="btn btn-primary" (click)="adicionarCarrinho(produto.id)">
               <mat-icon>add_shopping_cart</mat-icon>
             </a>
           </div>

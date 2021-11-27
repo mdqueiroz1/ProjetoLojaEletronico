@@ -133,10 +133,47 @@ public class GreetingsController {
 		return ResponseEntity.ok(response);
 	}
 	
+	
+	// create usuario rest api
+	@PostMapping("/carrinho")
+	public Carrinho createCarrinho(@RequestBody Carrinho carrinho) {
+		return carrinhoRepository.save(carrinho);
+	}
+	
 	// get all carrinho
 	@GetMapping("/carrinho")
 	public List<Carrinho> getAllCarrinho() {
 		return carrinhoRepository.findAll();
 	}
 
+	// Adicionar carrinho
+	@GetMapping("/carrinho/{id}")
+	public void adicionarAoCarrinho(@PathVariable Long id) {
+		Carrinho carrinho = new Carrinho();
+		
+		Produtos produto = produtosRepository.findById(id)
+				.orElseThrow(() -> new ResourceNotFoundException("Produto não existe id :" + id));
+		
+		carrinho.setNomeProduto(produto.getNomeProduto());
+		carrinho.setIdImagem(produto.getIdImagem());
+		carrinho.setPrecoProduto(produto.getPrecoProduto());
+		carrinho.setDescontoProduto(produto.getDescontoProduto());
+		carrinho.setQntProduto(1);
+		
+		carrinhoRepository.save(carrinho);
+		
+	}
+	
+	
+	@DeleteMapping("/carrinho/{id}")
+	public ResponseEntity<Map<String, Boolean>> deleteCarrinho(@PathVariable Long id) {
+		Carrinho carrinho = carrinhoRepository.findById(id)
+				.orElseThrow(() -> new ResourceNotFoundException("Carrinho não existe id :" + id));
+
+		carrinhoRepository.delete(carrinho);
+		Map<String, Boolean> response = new HashMap<>();
+		response.put("deleted", Boolean.TRUE);
+		return ResponseEntity.ok(response);
+	}
+	
 }

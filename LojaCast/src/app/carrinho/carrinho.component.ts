@@ -7,9 +7,12 @@ import { CarrinhoService } from '../services/carrinho.service';
   templateUrl: './carrinho.component.html',
   styleUrls: ['./carrinho.component.css']
 })
+
 export class CarrinhoComponent implements OnInit {
 
   carrinho!:Carrinho[];
+
+  valorProdutos!:number;
 
   constructor(private carrinhoService:CarrinhoService) { }
 
@@ -23,5 +26,11 @@ export class CarrinhoComponent implements OnInit {
     });
   }
 
+  deleteCarrinho(id: number){
+    this.carrinhoService.deleteCarrinho(id).subscribe( data => {
+      console.log(data);
+      this.getCarrinho();
+    })
+  }
 
 }
