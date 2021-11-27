@@ -18,8 +18,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.curso.crud.exception.ResourceNotFoundException;
+import com.curso.crud.model.Carrinho;
 import com.curso.crud.model.Produtos;
 import com.curso.crud.model.Usuario;
+import com.curso.crud.repository.CarrinhoRepository;
 import com.curso.crud.repository.ProdutosRepository;
 import com.curso.crud.repository.UsuarioRepository;
 
@@ -34,6 +36,9 @@ public class GreetingsController {
 	@Autowired
 	private ProdutosRepository produtosRepository;
 
+	@Autowired
+	private CarrinhoRepository carrinhoRepository;
+	
 	// get all produtos
 	@GetMapping("/produtos")
 	public List<Produtos> getAllProdutos() {
@@ -126,6 +131,12 @@ public class GreetingsController {
 		Map<String, Boolean> response = new HashMap<>();
 		response.put("deleted", Boolean.TRUE);
 		return ResponseEntity.ok(response);
+	}
+	
+	// get all carrinho
+	@GetMapping("/carrinho")
+	public List<Carrinho> getAllCarrinho() {
+		return carrinhoRepository.findAll();
 	}
 
 }

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Carrinho } from '../classes/carrinho';
+import { CarrinhoService } from '../services/carrinho.service';
 
 @Component({
   selector: 'app-carrinho',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CarrinhoComponent implements OnInit {
 
-  constructor() { }
+  carrinho!:Carrinho[];
+
+  constructor(private carrinhoService:CarrinhoService) { }
 
   ngOnInit(): void {
+    this.getCarrinho();
   }
+
+  private getCarrinho(){
+    this.carrinhoService.getListaCarrinho().subscribe(data => {
+      this.carrinho = data;
+    });
+  }
+
 
 }

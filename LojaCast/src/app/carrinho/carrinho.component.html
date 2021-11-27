@@ -1,66 +1,70 @@
 <app-header></app-header>
+<div class="corpo-carrinho">
 
-<div class="container">
+  <div class="container">
 
-  <mat-card>
-    <mat-card-title>Meu carrinho</mat-card-title>
-    <hr>
-    <div class="conteudo-carrinho">
-      <div class="row">
-        <div class="col-2">
-          <div class="foto-produto">
-            <img src="https://icon-library.com/images/tech-icon-png/tech-icon-png-16.jpg">
+    <mat-card>
+      <mat-card-title>Meu carrinho</mat-card-title>
+      <hr>
+      <div *ngFor="let item of carrinho" class="conteudo-carrinho">
+        <div class="row">
+          <div class="col-2">
+            <div class="foto-produto">
+              <img src="../../assets/produto-{{ item.idImagem }}.jpg">
+            </div>
+          </div>
+          <div class="col-6 descricao-produto">
+            {{ item.nomeProduto }}
+          </div>
+          <div class="col-2">
+            <mat-icon class="icon-qnt">expand_more</mat-icon>
+            <input class="input-qnt" type="number" value="{{ item.qntProduto}}">
+            <mat-icon class="icon-qnt">expand_less</mat-icon>
+          </div>
+          <div class="col-1 valor-produto">
+            <b>R$ {{ item.precoProduto }}</b>
           </div>
         </div>
-        <div class="col-6 descricao-produto">
-          titulo produto
-        </div>
-        <div class="col-2">
-          <mat-icon class="icon-qnt">expand_more</mat-icon>
-          <input class="input-qnt" type="number">
-          <mat-icon class="icon-qnt">expand_less</mat-icon>
-        </div>
-        <div class="col-1 valor-produto">
-          <b>R$</b>
+        <hr>
+      </div>
+      <mat-card-actions align="end">
+        <button mat-button>Continuar comprando</button>
+        <button mat-button>Finalizar compra</button>
+      </mat-card-actions>
+    </mat-card>
+
+  </div>
+
+  <div class="container">
+
+    <div class="row">
+      <div class="col-6 frete-container">
+        <b>Calcule o frete: </b>
+        <input type="nuumber">
+        <button class="btn rounded-pill"> Calcule</button>
+        <a class="link-cep">Não sei meu cep</a>
+        <div>
+          <hr>
+          <p>Normal</p>
+          <hr>
+          <p>Agendado</p>
+          <hr>
+          <p>Retira Rápido</p>
         </div>
       </div>
-    </div>
-    <mat-card-actions align="end">
-      <button mat-button>Continuar comprando</button>
-      <button mat-button>Finalizar compra</button>
-    </mat-card-actions>
-  </mat-card>
 
-</div>
-
-<div class="container">
-
-  <div class="row">
-    <div class="col-6 frete-container">
-      <b>Calcule o frete: </b>
-      <input type="nuumber">
-      <button class="btn rounded-pill"> Calcule</button>
-      <a class="link-cep">Não sei meu cep</a>
-      <div>
+      <div class="col-6 total-produtos">
         <hr>
-        <p>Normal</p>
+        <b>Total Produtos</b>
+        <b class=valor-final>R$</b>
         <hr>
-        <p>Agendado</p>
+        <b>Total Frete</b>
+        <b class=valor-final>R$</b>
         <hr>
-        <p>Retira Rápido</p>
+        <b>Total</b>
+        <b class="valor-final">R$</b>
       </div>
-    </div>
 
-    <div class="col-6 total-produtos">
-      <hr>
-      <b>Total Produtos</b>
-      <b class=valor-final>R$</b>
-      <hr>
-      <b>Total Frete</b>
-      <b class=valor-final>R$</b>
-      <hr>
-      <b>Total</b>
-      <b class="valor-final">R$</b>
     </div>
 
   </div>

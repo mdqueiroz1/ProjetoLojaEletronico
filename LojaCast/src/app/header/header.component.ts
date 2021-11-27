@@ -26,6 +26,10 @@ export class HeaderComponent {
     this.router.navigate(['']);
   }
 
+  goToCart(){
+    this.router.navigate(['/carrinho']);
+  }
+
 }
 
 

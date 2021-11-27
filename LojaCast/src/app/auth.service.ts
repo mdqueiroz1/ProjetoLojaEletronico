@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +14,9 @@ export class AuthService {
 
 
 
-  constructor(private fireBaseAuth: AngularFireAuth) {
+  constructor(private fireBaseAuth: AngularFireAuth,
+              private snackBar:MatSnackBar,
+              private router:Router) {
     //this.user = fireBaseAuth.authState;
   }
 
@@ -26,11 +30,13 @@ export class AuthService {
       .then(
         value => {
           console.log(this.msg);
-          window.location.href = "";
+          this.router.navigate([""]);
+          this.snackBar.open("Usuário Logado com sucesso!", "Certo");
         }
       ).catch((error) => {
         console.log(error.menssage);
         thisService.authError = error;
+        this.snackBar.open("Erro no usuário/senha", "Certo");
       })
   }
 
@@ -43,10 +49,12 @@ export class AuthService {
       .then(
         value => {
           console.log("usuário cadastrado no firebase com sucesso");
+          this.snackBar.open("Usuário cadastrado com sucesso!","Certo")
         }
 
       ).catch((error) => {
         console.log(error.menssage);
+        this.snackBar.open("Erro! Valores incorretos ou já existentes","Certo")
         thisService.authError = error;
       })
   }

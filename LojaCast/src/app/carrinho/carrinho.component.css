@@ -1,7 +1,9 @@
+.corpo-carrinho{
+  margin: 5% 0% 5% 0%;
+}
+
 .container{
   width: 100%;
-  margin: 5% 0% 5% 10%;
-  align-self: center;
 }
 
 input[type=number]::-webkit-inner-spin-button {
@@ -22,7 +24,8 @@ input[type=number] {
 }
 
 .descricao-produto{
-  margin-left: 15px;
+  font-size: 1.25rem;
+  margin-left: 0.9375rem;
   align-self: center;
 }
 
@@ -53,6 +56,7 @@ input[type=number] {
 }
 
 .input-qnt{
+  padding-left: 0.625rem;
   width: 20%;
 }
 

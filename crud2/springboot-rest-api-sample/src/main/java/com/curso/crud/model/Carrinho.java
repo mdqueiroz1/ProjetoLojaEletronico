@@ -17,10 +17,19 @@ public class Carrinho implements Serializable{
 	private long id;
 	
 	private int idImagem;
+	private int qntProduto;
 	private String nomeProduto;
 	private double precoProduto;
 	private double descontoProduto;
 	
+	
+	
+	public int getQntProduto() {
+		return qntProduto;
+	}
+	public void setQntProduto(int qntProduto) {
+		this.qntProduto = qntProduto;
+	}
 	public long getId() {
 		return id;
 	}
