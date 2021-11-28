@@ -18,6 +18,7 @@ label {
 }
 
 .tittle {
+  margin-top: 1%;
   font-weight: bold;
 }
 .div-tittle {
@@ -27,4 +28,26 @@ label {
   margin-left: 0;
   padding: 10px;
   background-color: orange;
+}
+
+.goBackButton {
+  border: 3px solid white;
+  border-radius: 10px;
+  background-color: green;
+  color: white;
+  font-weight: bold;
+  transition: background 1sg;
+}
+
+.goBackButton:hover {
+  border: 3px solid green;
+  border-radius: 10px;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  
+}
+
+.btn {
+  border-radius: 10px;
 }

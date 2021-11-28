@@ -34,6 +34,10 @@ export class ProdutoListComponent implements OnInit {
     this.router.navigate(['updateProduto', id]);
   }
 
+  goBack(){
+    this.router.navigate(['/criarProduto']);
+  }
+
   deleteProduto(id: number){
     this.produtoService.deleteProduto(id).subscribe( data => {
       console.log(data);

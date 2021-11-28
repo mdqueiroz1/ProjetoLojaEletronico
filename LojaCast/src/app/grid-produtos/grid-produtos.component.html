@@ -1,16 +1,6 @@
-<body>
-  <div class="container">
-    <div class="card" *ngFor="let produto of produtos">
-      <a [routerLink]="['/descricao']" routerLinkActive="router-link-active"><img src="../../assets/produto-{{produto.idImagem}}.jpg"></a>
-      <div class="card-body">
-        <h5 class="card-title">{{ produto.nomeProduto }}</h5>
-        <p><s><b>{{ produto.precoProduto }}</b></s></p>
-        <p id="precoAtual"><b>R$ {{produto.precoProduto }}</b></p>
-      <p>À vista no PIX</p>
-      <p class="card-text">{{ produto.descricaoProduto }}</p>
 
-      <div class="container">
-        <div class="row">
+  <div class="container">
+
 
           <div class="col">
             <a class="btn botaoComprar btn-primary" (click)="comprarProduto(produto.id)">COMPRAR</a>
@@ -19,12 +9,13 @@
             <a class="btn btn-primary" (click)="adicionarCarrinho(produto.id)">
               <mat-icon>add_shopping_cart</mat-icon>
             </a>
+
           </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
-</body>
 
-<app-footer></app-footer>
+  </div>
+
+</div>
+</div>

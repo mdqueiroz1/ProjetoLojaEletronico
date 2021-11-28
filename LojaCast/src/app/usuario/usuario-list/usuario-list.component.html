@@ -18,9 +18,9 @@
               <td> {{ usuario.cpf }} </td>
               <td> {{ usuario.email }} </td>
               <td>
-                  <button (click) = "updateUsuario(usuario.id)" class = "btn btn-primary"> Update</button>
-                  <button (click) = "deleteUsuario(usuario.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
-                  <button (click) = "usuarioDetails(usuario.id)" class = "btn btn-primary" style="margin-left: 10px"> View</button>
+                  <button (click) = "updateUsuario(usuario.id)" class = "btn botaoUpdate"> Editar</button>
+                  <button (click) = "deleteUsuario(usuario.id)" class = "btn botaoDelete" style="margin-left: 10px"> Deletar</button>
+                  <button (click) = "usuarioDetails(usuario.id)" class = "btn botaoView" style="margin-left: 10px"> Detalhe</button>
               </td>
           </tr>
       </tbody>

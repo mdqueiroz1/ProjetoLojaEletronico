@@ -36,4 +36,9 @@ export class UsuarioUpdateComponent implements OnInit {
     this.router.navigate(['/listaUsuario']);
   }
 
+  
+  goBack(){
+    this.router.navigate(['/listaUsuario']);
+  }
+
 }

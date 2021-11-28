@@ -1,31 +1,50 @@
-
 .card-detalhes-produto {
-    width: 80%;
-    margin: 5% 0% 0% 10%;
-    border: 2px solid black;
-    border-radius: 10px;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
-  }
-  
-  .card-detalhes-produto label {
-    margin-bottom: 10px;
-  }
-  
-  label {
-    margin-left: 2%;
-    margin-top: 1%;
-    font-size: 17px;
-  }
-  
-  .tittle {
-    font-weight: bold;
-  }
-  .div-tittle {
-    text-align: center;
-    border-radius: 10px;
-    border: 2px solid black;
-    margin-left: 0;
-    padding: 10px;
-    background-color: orange;
-  }
-  
+  width: 80%;
+  margin: 5% 0% 0% 10%;
+  border: 2px solid black;
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
+}
+
+.card-detalhes-produto label {
+  margin-bottom: 10px;
+}
+
+label {
+  margin-left: 2%;
+  margin-top: 1%;
+  font-size: 17px;
+}
+
+.tittle {
+  margin-top: 1%;
+  font-weight: bold;
+}
+.div-tittle {
+  text-align: center;
+  border-radius: 10px;
+  border: 2px solid black;
+  margin-left: 0;
+  padding: 10px;
+  background-color: orange;
+}
+.goBackButton {
+  border: 3px solid white;
+  border-radius: 10px;
+  background-color: green;
+  color: white;
+  font-weight: bold;
+  transition: background 1sg;
+}
+
+.goBackButton:hover {
+  border: 3px solid green;
+  border-radius: 10px;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+}
+
+.btn {
+  border-radius: 10px;
+}

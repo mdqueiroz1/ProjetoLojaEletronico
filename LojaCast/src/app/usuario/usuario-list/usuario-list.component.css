@@ -30,3 +30,77 @@
   padding: 10px;
   background-color: orange;
 }
+.botaoView {
+  border: 3px solid black;
+  border-radius: 10px;
+  background-color: blue;
+  color: white;
+  font-weight: bold;
+  transition: background 1sg;
+}
+.botaoView:hover {
+  border: 3px solid blue;
+  border-radius: 10px;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  
+}
+
+.botaoDelete {
+  border: 3px solid black;
+  border-radius: 10px;
+  background-color: rgb(206, 6, 6);
+  color: white;
+  font-weight: bold;
+  transition: background 1sg;
+}
+
+.botaoDelete:hover {
+  border: 3px solid red;
+  border-radius: 10px;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  
+}
+
+.botaoUpdate {
+  border: 3px solid black;
+  border-radius: 10px;
+  background-color: orange;
+  color: white;
+  font-weight: bold;
+  transition: background 1sg;
+}
+
+.botaoUpdate:hover {
+  border: 3px solid orange;
+  border-radius: 10px;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  
+}
+
+.goBackButton {
+  border: 3px solid white;
+  border-radius: 10px;
+  background-color: green;
+  color: white;
+  font-weight: bold;
+  transition: background 1sg;
+}
+
+.goBackButton:hover {
+  border: 3px solid green;
+  border-radius: 10px;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  
+}
+
+.btn {
+  border-radius: 10px;
+}

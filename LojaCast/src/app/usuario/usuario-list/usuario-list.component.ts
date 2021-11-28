@@ -26,6 +26,7 @@ export class UsuarioListComponent implements OnInit {
     });
   }
 
+
   usuarioDetails(id: number){
     this.router.navigate(['detalhaUsuario', id]);
   }
