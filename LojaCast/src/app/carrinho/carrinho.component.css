@@ -23,6 +23,10 @@ input[type=number] {
   color: red;
 }
 
+.excluir-produto:hover{
+  cursor: pointer;
+}
+
 .foto-produto img{
   margin-left: 30%;
   width: 80px;

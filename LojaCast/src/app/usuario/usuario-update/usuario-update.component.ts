@@ -33,7 +33,7 @@ export class UsuarioUpdateComponent implements OnInit {
   }
 
   goToUsuarioList(){
-    this.router.navigate(['/usuarios']);
+    this.router.navigate(['/listaUsuario']);
   }
 
 }
