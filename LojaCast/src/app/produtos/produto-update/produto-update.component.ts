@@ -11,7 +11,7 @@ import { ProdutoService } from 'src/app/services/produto.service';
 export class ProdutoUpdateComponent implements OnInit {
 
   id!: number;
- 
+
   produto: Produto = new Produto();
   constructor(private produtoService: ProdutoService,
     private route: ActivatedRoute,
@@ -33,7 +33,7 @@ export class ProdutoUpdateComponent implements OnInit {
   }
 
   goToProdutoList(){
-    this.router.navigate(['/produtos']);
+    this.router.navigate(['/listaProduto']);
   }
 
   goBack(){
