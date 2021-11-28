@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Usuario } from 'src/app/classes/usuario';
 import { UsuarioService } from 'src/app/services/usuario.service';
 
@@ -9,11 +9,12 @@ import { UsuarioService } from 'src/app/services/usuario.service';
   styleUrls: ['./usuario-detalhes.component.css']
 })
 export class UsuarioDetalhesComponent implements OnInit {
+  
 
   id!:number;
   usuario!:Usuario;
 
-  constructor(private route: ActivatedRoute, private usuarioService:UsuarioService) { }
+  constructor(private route: ActivatedRoute, private usuarioService:UsuarioService,private router: Router) { }
 
   ngOnInit(): void {
     this.id = this.route.snapshot.params['id'];
@@ -22,6 +23,10 @@ export class UsuarioDetalhesComponent implements OnInit {
     this.usuarioService.getUsuarioId(this.id).subscribe( data => {
       this.usuario = data;
     });
+  }
+  
+  goBack(){
+    this.router.navigate(['/listaUsuario']);
   }
 
 }

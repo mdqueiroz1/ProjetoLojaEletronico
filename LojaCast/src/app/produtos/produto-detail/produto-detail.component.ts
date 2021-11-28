@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Produto } from 'src/app/classes/produto';
 import { ProdutoService } from 'src/app/services/produto.service';
 
@@ -13,7 +13,7 @@ export class ProdutoDetailComponent implements OnInit {
   id!: number;
   produto!: Produto;
   imagem!:any;
-  constructor(private route: ActivatedRoute, private produtoService: ProdutoService) { }
+  constructor(private route: ActivatedRoute, private produtoService: ProdutoService, private router: Router) { }
 
   ngOnInit(): void {
     this.id = this.route.snapshot.params['id'];
@@ -23,5 +23,9 @@ export class ProdutoDetailComponent implements OnInit {
       this.produto = data;
       this.imagem = `../../../assets/produto-${this.produto.idImagem}.jpg`
     });
+  }
+
+  goBack(){
+    this.router.navigate(['/listaProduto']);
   }
 }

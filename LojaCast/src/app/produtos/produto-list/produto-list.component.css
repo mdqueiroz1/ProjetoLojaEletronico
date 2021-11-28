@@ -1,35 +1,104 @@
+.card-produto-list {
+  margin: 5% 0% 0% 10%;
+  width: 80%;
+  border: 2px solid black;
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
+}
 
-.card-produto-list{
-    
-    margin: 5% 0% 0% 10%;
-    width: 80%;
-    
-    border: 2px solid black;
-    border-radius: 10px;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
-    
-  }
+.botaoView {
+  border: 3px solid black;
+  border-radius: 10px;
+  background-color: blue;
+  color: white;
+  font-weight: bold;
+  transition: background 1sg;
+}
+.botaoView:hover {
+  border: 3px solid blue;
+  border-radius: 10px;
+  background-color: white;
+  color: black;
+  font-weight: bold;
   
+}
+
+.botaoDelete {
+  border: 3px solid black;
+  border-radius: 10px;
+  background-color: rgb(206, 6, 6);
+  color: white;
+  font-weight: bold;
+  transition: background 1sg;
+}
+
+.botaoDelete:hover {
+  border: 3px solid red;
+  border-radius: 10px;
+  background-color: white;
+  color: black;
+  font-weight: bold;
   
+}
+
+.botaoUpdate {
+  border: 3px solid black;
+  border-radius: 10px;
+  background-color: orange;
+  color: white;
+  font-weight: bold;
+  transition: background 1sg;
+}
+
+.botaoUpdate:hover {
+  border: 3px solid orange;
+  border-radius: 10px;
+  background-color: white;
+  color: black;
+  font-weight: bold;
   
-  .table {
-    text-align: center;
-    border: 1px solid black;
-    width: 96%;
-    margin-left: 2%;
-    margin-top: 1%;
-    font-size: 17px;
-  }
+}
+
+.goBackButton {
+  border: 3px solid white;
+  border-radius: 10px;
+  background-color: green;
+  color: white;
+  font-weight: bold;
+  transition: background 1sg;
+}
+
+.goBackButton:hover {
+  border: 3px solid green;
+  border-radius: 10px;
+  background-color: white;
+  color: black;
+  font-weight: bold;
   
-  .tittle {
-    font-weight: bold;
-  }
-  .div-tittle {
-    text-align: center;
-    border-radius: 10px;
-    border: 2px solid black;
-    margin-left: 0;
-    padding: 10px;
-    background-color: orange;
-  }
-  
+}
+
+.btn {
+  border-radius: 10px;
+}
+
+.table {
+  text-align: center;
+  border: 1px solid black;
+  width: 96%;
+  margin-left: 2%;
+  margin-top: 1%;
+  font-size: 17px;
+}
+
+.tittle {
+  margin-top: 1%;
+  font-weight: bold;
+}
+.div-tittle {
+  text-align: center;
+  border-radius: 10px;
+  border: 2px solid black;
+  margin-left: 0;
+  padding: 10px;
+  background-color: orange;
+}
