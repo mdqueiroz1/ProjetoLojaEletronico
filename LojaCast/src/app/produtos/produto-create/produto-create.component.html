@@ -1,53 +1,58 @@
 <mat-card class="card-criar-produto">
   <div class="div-tittle">
     <mat-card-title class="tittle">Cadastrar Produto</mat-card-title>
-  </div> 
+  </div>
 
-  
+
   <div class="card-body">
-      <form (ngSubmit)="onSubmit()">
+    <form (ngSubmit)="onSubmit()">
 
-          <div class="form-group">
-              <label> Nome</label>
-              <input type="text" class="form-control" id="nomeProduto" [(ngModel)]="produto.nomeProduto"
-                  name="nomeProduto">
+      <div class="form-group">
+        <label> Nome </label>
+        <input type="text" class="form-control" id="nomeProduto" [(ngModel)]="produto.nomeProduto" name="nomeProduto">
+      </div>
+
+      <div class="form-group">
+        <label> ID da imagem</label>
+        <input type="text" class="form-control" id="idImagemProduto" [(ngModel)]="produto.idImagem"
+          name="idImagemProduto">
+      </div>
+
+      <div class="form-group">
+        <label> Descrição</label>
+        <input type="text" class="form-control" id="descricaoProduto" [(ngModel)]="produto.descricaoProduto"
+          name="descricaoProduto">
+      </div>
+
+      <div class="form-group">
+        <label> Preço</label>
+        <input type="text" class="form-control" id="precoProduto" [(ngModel)]="produto.precoProduto"
+          name="precoProduto">
+      </div>
+
+      <div class="form-group">
+        <label> Desconto</label>
+        <input type="text" class="form-control" id="descontoProduto" [(ngModel)]="produto.descontoProduto"
+          name="descontoProduto">
+      </div>
+
+      <br />
+
+      <div class="container">
+        <div class="row">
+          <div class="col-2">
+
           </div>
-
-          <div class="form-group">
-              <label> Descrição</label>
-              <input type="text" class="form-control" id="descricaoProduto" [(ngModel)]="produto.descricaoProduto"
-                  name="descricaoProduto">
+          <div class="col-4 ">
+            <button class="btn " type="submit">Cadastrar</button>
           </div>
+          <div class="co-2">
 
-          <div class="form-group">
-              <label> Preço</label>
-              <input type="text" class="form-control" id="precoProduto" [(ngModel)]="produto.precoProduto"
-                  name="precoProduto">
           </div>
+        </div>
+      </div>
 
-          <div class="form-group">
-              <label> Desconto</label>
-              <input type="text" class="form-control" id="descontoProduto" [(ngModel)]="produto.descontoProduto"
-                  name="descontoProduto">
-          </div>
 
-          <br />
-
-          <div class="container">
-              <div class="row">
-                <div class="col-2">
-                  
-                </div>
-                <div class="col-4 ">
-                  <button class="btn " type="submit">Cadastrar</button>
-                </div>
-                <div class="co-2">
-                  
-                </div>
-              </div>
-            </div>
-          
-
-      </form>
+    </form>
   </div>
 </mat-card>
