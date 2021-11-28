@@ -1,7 +1,20 @@
 <mat-card class="card-detalhes-produto">
     <div class="div-tittle">
-        <mat-card-title class="tittle">Detalhes do Produto</mat-card-title>
-    </div>
+
+        <div class="container">
+          <div class="row">
+    
+            <div class="col-10">
+              <mat-card-title class="tittle">Detalhes do Produto</mat-card-title>
+            </div>
+            <div class="col-2">
+              <button (click) = goBack() class = "btn goBackButton">Voltar</button>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+
     <div>
         <div>
             <label> <b> Nome: </b></label> {{produto.nomeProduto}}

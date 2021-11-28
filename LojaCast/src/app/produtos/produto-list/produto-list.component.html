@@ -1,7 +1,20 @@
 
 <mat-card class="card-produto-list">
     <div class="div-tittle">
-        <mat-card-title class="tittle">Lista de Produtos</mat-card-title>
+        <div class="container">
+            <div class="row">
+              
+              <div class="col-10">
+                <mat-card-title class="tittle">Lista de Produtos</mat-card-title>
+              </div>
+              <div class="col-2">
+                <button (click) = goBack() class = "btn goBackButton">Criar + Produtos</button>
+              </div>
+            </div>
+            
+          </div>
+        
+        
     </div>
     
     <table class = "table table-striped table-bordered">
@@ -20,9 +33,9 @@
               <td> {{ produto.precoProduto }} </td>
               <td> {{ produto.descontoProduto }} </td>
               <td>
-                  <button (click) = "updateProduto(produto.id)" class = "btn btn-primary"> Update</button>
-                  <button (click) = "deleteProduto(produto.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
-                  <button (click) = "produtoDetails(produto.id)" class = "btn btn-primary" style="margin-left: 10px"> View</button>
+                  <button (click) = "updateProduto(produto.id)" class = "btn botaoUpdate "> Editar</button>
+                  <button (click) = "deleteProduto(produto.id)" class = "btn botaoDelete " style="margin-left: 10px"> Deletar</button>
+                  <button (click) = "produtoDetails(produto.id)" class = "btn botaoView " style="margin-left: 10px"> Detalhe</button>
               </td>
           </tr>
       </tbody>
