@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, RouterLink } from '@angular/router';
 import { Carrinho } from '../classes/carrinho';
 import { CarrinhoService } from '../services/carrinho.service';
 
@@ -14,7 +15,8 @@ export class CarrinhoComponent implements OnInit {
 
   valorProdutos!:number;
 
-  constructor(private carrinhoService:CarrinhoService) { }
+  constructor(private carrinhoService:CarrinhoService,
+              private router:Router) { }
 
   ngOnInit(): void {
     this.getCarrinho();
@@ -33,4 +35,11 @@ export class CarrinhoComponent implements OnInit {
     })
   }
 
+  goToHome(){
+    this.router.navigate(['']);
+  }
+
+  goToPagamento(){
+    this.router.navigate(['/pagamento']);
+  }
 }

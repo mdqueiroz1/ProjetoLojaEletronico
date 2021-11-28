@@ -25,7 +25,7 @@ export class UsuarioCreateComponent implements OnInit {
   saveUsuario(){
     this.usuarioService.createUsuario(this.usuario).subscribe( data =>{
       console.log(data);
-      this.authService.signUpEmail(this.usuario.email, this.senha);
+      this.authService.signUpEmail(this.usuario, this.senha);
       this.goToLogin();
     },
     error => console.log(error));

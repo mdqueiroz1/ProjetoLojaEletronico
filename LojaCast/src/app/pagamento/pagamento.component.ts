@@ -1,12 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormBuilder ,Validators, FormGroup } from '@angular/forms';
+import { FormControl, FormBuilder, Validators, FormGroup } from '@angular/forms';
 
 import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
-
-interface Estado{
-  nome:String;
-  sigla:String;
-}
+import { CepService } from '../services/cep.service';
+import { Cep } from '../classes/cep';
 
 @Component({
   selector: 'app-pagamento',
@@ -15,62 +12,21 @@ interface Estado{
   providers: [
     {
       provide: STEPPER_GLOBAL_OPTIONS,
-      useValue: {showError: true},
+      useValue: { showError: true },
     },
+
   ],
 })
 
 export class PagamentoComponent implements OnInit {
-  enderecoFormControl = new FormControl('', [Validators.required, Validators.maxLength(60)]);
-  numeroFormControl = new FormControl('', [Validators.required, Validators.maxLength(10)]);
-  cidadeFormControl = new FormControl('', [Validators.required, Validators.maxLength(60)]);
-  bairroFormControl = new FormControl('', [Validators.required, Validators.maxLength(60)]);
-  cepFormControl = new FormControl('', [Validators.required, Validators.maxLength(8)]);
-  estadoControl = new FormControl('', Validators.required);
-  cartaoDeCreditoFormControl = new FormControl('', Validators.required);
-  cvcFormControl = new FormControl('', Validators.required);
-  cpfBoletoFormControl = new FormControl('', Validators.required);
-  nomeBoletoFormControl = new FormControl('', Validators.required);
-  nomeCartaoFormControl = new FormControl('', Validators.required);
-  dateFormControl = new FormControl('', Validators.required);
-
-
   firstFormGroup!: FormGroup;
   secondFormGroup!: FormGroup;
   panelOpenState = false;
+  cep = new Cep();
+  cepValor!:number
 
-  estados: Estado[] = [
-    {nome: "Acre", sigla: "AC"},
-    {nome: "Alagoas", sigla: "AL"},
-    {nome: "Amapá", sigla: "AP"},
-    {nome: "Amazonas", sigla: "AM"},
-    {nome: "Bahia", sigla: "BA"},
-    {nome: "Ceará", sigla: "CE"},
-    {nome: "Distrito Federal", sigla: "DF"},
-    {nome: "Espírito Santo", sigla: "ES"},
-    {nome: "Goiás", sigla: "GO"},
-    {nome: "Maranhão", sigla: "MA"},
-    {nome: "Mato Grosso", sigla: "MT"},
-    {nome: "Mato Grosso do Sul", sigla: "MS"},
-    {nome: "Minas Gerais", sigla: "MG"},
-    {nome: "Pará", sigla: "PA"},
-    {nome: "Paraíba", sigla: "PB"},
-    {nome: "Paraná", sigla: "PR"},
-    {nome: "Pernambuco", sigla: "PE"},
-    {nome: "Piauí", sigla: "PI"},
-    {nome: "Rio de Janeiro", sigla: "RJ"},
-    {nome: "Rio Grande do Norte", sigla: "RN"},
-    {nome: "Rio Grande do Sul", sigla: "RS"},
-    {nome: "Rondônia", sigla: "RO"},
-    {nome: "Roraima", sigla: "RR"},
-    {nome: "Santa Catarina", sigla: "SC"},
-    {nome: "São Paulo", sigla: "SP"},
-    {nome: "Sergipe", sigla: "SE"},
-    {nome: "Tocantins", sigla: "TO"}
-  ];
-
-
-  constructor(private _formBuilder: FormBuilder) { }
+  constructor(private _formBuilder: FormBuilder,
+    private cepService: CepService) { }
 
   ngOnInit(): void {
     this.firstFormGroup = this._formBuilder.group({
@@ -81,7 +37,28 @@ export class PagamentoComponent implements OnInit {
     });
   }
 
+  consultarCep() {
+    console.log("requisicao feita");
+    this.cepService.consultaCep(this.cepValor).subscribe(res => {
+      console.log(res);
+      this.cep = res;
+    })
+  }
 
-  finalizarCompra(){}
+  finalizarCompra() { }
 
+  enderecoFormControl = new FormControl('', [Validators.required, Validators.maxLength(60)]);
+  numeroFormControl = new FormControl('', [Validators.required, Validators.maxLength(10)]);
+  cidadeFormControl = new FormControl('', [Validators.required, Validators.maxLength(60)]);
+  bairroFormControl = new FormControl('', [Validators.required, Validators.maxLength(60)]);
+  cepFormControl = new FormControl('', [Validators.required, Validators.maxLength(8)]);
+  estadoFormControl = new FormControl('', [Validators.required, Validators.maxLength(2)]);
+  cartaoDeCreditoFormControl = new FormControl('', Validators.required);
+  cvcFormControl = new FormControl('', Validators.required);
+  cpfBoletoFormControl = new FormControl('', Validators.required);
+  nomeBoletoFormControl = new FormControl('', Validators.required);
+  nomeCartaoFormControl = new FormControl('', Validators.required);
+  dataCartaoFormControl = new FormControl('', Validators.required);
+  mesFormControl = new FormControl('', [Validators.required, Validators.maxLength(3)]);
+  anoFormControl = new FormControl('', [Validators.required, Validators.maxLength(3)]);
 }

@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
+import { Usuario } from './classes/usuario';
+import { UsuarioService } from './services/usuario.service';
 
 @Injectable({
   providedIn: 'root'
@@ -15,6 +17,7 @@ export class AuthService {
 
 
   constructor(private fireBaseAuth: AngularFireAuth,
+              private usuarioService:UsuarioService,
               private snackBar:MatSnackBar,
               private router:Router) {
     //this.user = fireBaseAuth.authState;
@@ -40,14 +43,15 @@ export class AuthService {
       })
   }
 
-  signUpEmail(email:string, senha: string) {
+  signUpEmail(usuario:Usuario, senha: string) {
     let thisService = this;
 
     thisService.authError = null;
 
-    this.fireBaseAuth.createUserWithEmailAndPassword(email, senha)
+    this.fireBaseAuth.createUserWithEmailAndPassword(usuario.email, senha)
       .then(
         value => {
+          this.usuarioService.createUsuario(usuario);
           console.log("usuário cadastrado no firebase com sucesso");
           this.snackBar.open("Usuário cadastrado com sucesso!","Certo")
         }
