@@ -28,7 +28,7 @@ import { MatStepperModule } from '@angular/material/stepper';
     MatIconModule,
     MatExpansionModule,
     MatCardModule,
-     MatButtonModule,
+    MatButtonModule,
     MatDialogModule,
     MatInputModule,
     MatStepperModule,

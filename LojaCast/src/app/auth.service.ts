@@ -51,9 +51,10 @@ export class AuthService {
     this.fireBaseAuth.createUserWithEmailAndPassword(usuario.email, senha)
       .then(
         value => {
+          console.log(value);
           this.usuarioService.createUsuario(usuario);
           console.log("usuário cadastrado no firebase com sucesso");
-          this.snackBar.open("Usuário cadastrado com sucesso!","Certo")
+          this.snackBar.open("Usuário cadastrado com sucesso!","Certo");
         }
 
       ).catch((error) => {

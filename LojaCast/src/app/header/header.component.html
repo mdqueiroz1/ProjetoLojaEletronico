@@ -41,7 +41,7 @@
 
         </div>
         <div class="col-2">
-          <a><img class="img-icone-loja" src="https://icon-library.com/images/tech-icon-png/tech-icon-png-16.jpg" (click)="goToHome()"></a>
+          <a><img class="img-icone-loja" src="../../assets/icone_loja.PNG" (click)="goToHome()"></a>
         </div>
         <div class="col-6">
           <div class="container pesquisaCabecalho">
@@ -60,7 +60,7 @@
             <div class="row">
               <div class="col icone-area-user">
                 <button class="botao-area-user" mat-icon-button [matMenuTriggerFor]="menuUser">
-                  <mat-icon class="iconeSessaoUser" >account_circle</mat-icon>
+                  <mat-icon class="iconeSessaoUser iconeMenuUser" >account_circle</mat-icon>
                 </button>
                 <mat-menu #menuUser="matMenu">
                   <button class="opc-menu" mat-menu-item (click)="goToLogin()">

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { Produto } from '../classes/produto';
 import { ProdutoListComponent } from '../produtos/produto-list/produto-list.component';
@@ -16,7 +17,8 @@ export class GridProdutosComponent implements OnInit {
 
   constructor(private produtoService:ProdutoService,
               private carrinhoService:CarrinhoService,
-              private router:Router) { }
+              private router:Router,
+              private snackBar:MatSnackBar) { }
 
 
   ngOnInit(): void {
@@ -32,10 +34,15 @@ export class GridProdutosComponent implements OnInit {
   adicionarCarrinho(id :number){
     this.carrinhoService.adicionarAoCarrinho(id).subscribe(res =>{
       console.log(res);
+      this.snackBar.open("Adicionado ao carrinho! ", "Ok",{duration:2000});
     })
   }
 
   comprarProduto(id:number){
+    this.carrinhoService.adicionarAoCarrinho(id).subscribe(res =>{
+      console.log(res);
+      this.router.navigate(['/carrinho']);
+    })
   }
 
 }

@@ -11,14 +11,9 @@
 
       <div class="container">
         <div class="row">
-
-          <div class="col">
-            <a class="btn botaoComprar btn-primary" (click)="comprarProduto(produto.id)">COMPRAR</a>
-          </div>
-          <div class="col">
-            <a class="btn btn-primary" (click)="adicionarCarrinho(produto.id)">
-              <mat-icon>add_shopping_cart</mat-icon>
-            </a>
+          <div class="btn-group">
+            <a (click)="comprarProduto(produto.id)" class="btn botaoCompra" aria-current="page">Comprar</a>
+            <a (click)="adicionarCarrinho(produto.id)" class="btn botaoCarrinho"><mat-icon>add_shopping_cart</mat-icon></a>
           </div>
         </div>
       </div>
