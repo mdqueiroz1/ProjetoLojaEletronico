@@ -1,6 +1,8 @@
+import { ValueConverter } from '@angular/compiler/src/render3/view/template';
 import { Component, OnInit } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 import { Carrinho } from '../classes/carrinho';
+import { Produto } from '../classes/produto';
 import { CarrinhoService } from '../services/carrinho.service';
 
 @Component({
@@ -9,11 +11,13 @@ import { CarrinhoService } from '../services/carrinho.service';
   styleUrls: ['./carrinho.component.css']
 })
 
+
 export class CarrinhoComponent implements OnInit {
 
   carrinho!:Carrinho[];
+  produtos!:any[];
+  totalProdutos!:any[];
 
-  valorProdutos!:number;
 
   constructor(private carrinhoService:CarrinhoService,
               private router:Router) { }
@@ -25,6 +29,17 @@ export class CarrinhoComponent implements OnInit {
   private getCarrinho(){
     this.carrinhoService.getListaCarrinho().subscribe(data => {
       this.carrinho = data;
+
+      this.produtos = this.carrinho.map(function(carrinho){
+        return carrinho.precoProduto;
+      })
+
+      this.totalProdutos = this.produtos.reduce(function(total, produtos){
+        return total+ produtos
+      })
+
+      console.log(this.totalProdutos);
+      localStorage.setItem('totalItens', this.totalProdutos.toString());
     });
   }
 

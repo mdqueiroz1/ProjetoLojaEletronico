@@ -4,6 +4,7 @@ import { FormControl, FormBuilder, Validators, FormGroup } from '@angular/forms'
 import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
 import { CepService } from '../services/cep.service';
 import { Cep } from '../classes/cep';
+import { CarrinhoComponent } from '../carrinho/carrinho.component';
 
 @Component({
   selector: 'app-pagamento',
@@ -25,6 +26,8 @@ export class PagamentoComponent implements OnInit {
   cep = new Cep();
   cepValor!:number
 
+  itens!:any;
+
   constructor(private _formBuilder: FormBuilder,
     private cepService: CepService) { }
 
@@ -35,6 +38,9 @@ export class PagamentoComponent implements OnInit {
     this.secondFormGroup = this._formBuilder.group({
       secondCtrl: ['', Validators.required],
     });
+
+    this.itens = localStorage.getItem('totalItens');
+
   }
 
   consultarCep() {
