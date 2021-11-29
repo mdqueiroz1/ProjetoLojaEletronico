@@ -44,4 +44,9 @@ export class ProdutoListComponent implements OnInit {
       this.getProdutos();
     })
   }
+
+  goToHome(){
+    this.router.navigate(['']);
+  }
+
 }

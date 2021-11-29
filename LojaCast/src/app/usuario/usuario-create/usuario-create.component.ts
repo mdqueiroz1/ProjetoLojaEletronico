@@ -42,7 +42,7 @@ export class UsuarioCreateComponent implements OnInit {
 
   nomeFormControl = new FormControl('', [Validators.required, Validators.minLength(3)]);
   emailFormControl = new FormControl('', [Validators.required, Validators.email ]);
-  senhaFormControl = new FormControl('', [Validators.required,Validators.minLength(4)]);
+  senhaFormControl = new FormControl('', [Validators.required,Validators.minLength(6)]);
   confirmSenhaFormControl = new FormControl('', [Validators.required, Validators.minLength(4)]);
   cpfFormControl = new FormControl('', [Validators.required, Validators.maxLength(11),Validators.minLength(11)]);
   cepFormControl = new FormControl('', [Validators.required, Validators.maxLength(8),Validators.minLength(8), Validators.pattern('[0-9]*')]);

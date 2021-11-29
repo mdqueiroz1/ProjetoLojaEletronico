@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { UsuarioService } from 'src/app/services/usuario.service';
 import { Usuario } from 'src/app/classes/usuario';
 
@@ -40,6 +40,10 @@ export class UsuarioListComponent implements OnInit {
       console.log(data);
       this.getUsuarios();
     })
+  }
+
+  goToHome(){
+    this.router.navigate(['']);
   }
 
 }
