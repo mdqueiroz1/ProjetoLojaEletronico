@@ -22,14 +22,14 @@ export class ProdutoUpdateComponent implements OnInit {
 
     this.produtoService.getProdutoById(this.id).subscribe(data => {
       this.produto = data;
-    }, error => console.log(error));
+    }, error => console.log(error)).unsubscribe;
   }
 
   onSubmit(){
     this.produtoService.updateProduto(this.id, this.produto).subscribe( data =>{
       this.goToProdutoList();
     }
-    , error => console.log(error));
+    , error => console.log(error)).unsubscribe;
   }
 
   goToProdutoList(){

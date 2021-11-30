@@ -28,7 +28,7 @@ export class UsuarioCreateComponent implements OnInit {
       this.authService.signUpEmail(this.usuario, this.senha);
       this.goToLogin();
     },
-    error => console.log(error));
+    error => console.log(error)).unsubscribe;
   }
 
   goToLogin(){

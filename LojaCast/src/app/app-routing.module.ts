@@ -11,14 +11,6 @@ import { EntregaEfreteComponent } from './entrega-efrete/entrega-efrete.componen
 import { PoliticaEtrocaComponent } from './politica-etroca/politica-etroca.component';
 import { DescricaoProdutoComponent } from './descricao-produto/descricao-produto.component';
 import { ProdutosComponent } from './produtos/produtos.component';
-import { DescricaoProduto2Component } from './descricao-produto2/descricao-produto2.component';
-import { DescricaoProduto3Component } from './descricao-produto3/descricao-produto3.component';
-import { DescricaoProduto4Component } from './descricao-produto4/descricao-produto4.component';
-import { DescricaoProduto5Component } from './descricao-produto5/descricao-produto5.component';
-import { DescricaoProduto6Component } from './descricao-produto6/descricao-produto6.component';
-import { DescricaoProduto7Component } from './descricao-produto7/descricao-produto7.component';
-import { DescricaoProduto8Component } from './descricao-produto8/descricao-produto8.component';
-import { DescricaoProduto9Component } from './descricao-produto9/descricao-produto9.component';
 import { UsuarioCreateComponent } from './usuario/usuario-create/usuario-create.component';
 import { UsuarioListComponent } from './usuario/usuario-list/usuario-list.component';
 import { UsuarioDeleteComponent } from './usuario/usuario-delete/usuario-delete.component';
@@ -38,15 +30,7 @@ const routes: Routes = [
   {path: 'quemSomos', component:QuemSomosComponent},
   {path: 'entregaEfrete', component:EntregaEfreteComponent},
   {path: 'politicaEtroca', component:PoliticaEtrocaComponent},
-  {path: 'descricaoProduto/1', component:DescricaoProdutoComponent},
-  {path: 'descricaoProduto/2', component:DescricaoProduto2Component},
-  {path: 'descricaoProduto/3', component:DescricaoProduto3Component},
-  {path: 'descricaoProduto/4', component:DescricaoProduto4Component},
-  {path: 'descricaoProduto/5', component:DescricaoProduto5Component},
-  {path: 'descricaoProduto/6', component:DescricaoProduto6Component},
-  {path: 'descricaoProduto/7', component:DescricaoProduto7Component},
-  {path: 'descricaoProduto/8', component:DescricaoProduto8Component},
-  {path: 'descricaoProduto/9', component:DescricaoProduto9Component},
+  {path: 'descricaoProduto/:id', component:DescricaoProdutoComponent},
   {path: 'criarUsuario', component:UsuarioCreateComponent},
   {path: 'listaUsuario', component:UsuarioListComponent},
   {path: 'deletaUsuario', component:UsuarioDeleteComponent},

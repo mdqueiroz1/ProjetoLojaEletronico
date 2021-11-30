@@ -9,7 +9,7 @@ import { UsuarioService } from 'src/app/services/usuario.service';
   styleUrls: ['./usuario-detalhes.component.css']
 })
 export class UsuarioDetalhesComponent implements OnInit {
-  
+
 
   id!:number;
   usuario!:Usuario;
@@ -22,9 +22,9 @@ export class UsuarioDetalhesComponent implements OnInit {
     this.usuario = new Usuario();
     this.usuarioService.getUsuarioId(this.id).subscribe( data => {
       this.usuario = data;
-    });
+    }).unsubscribe;
   }
-  
+
   goBack(){
     this.router.navigate(['/listaUsuario']);
   }

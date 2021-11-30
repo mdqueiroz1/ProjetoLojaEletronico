@@ -39,11 +39,20 @@ export class UsuarioListComponent implements OnInit {
     this.usuarioService.deleteUsuario(id).subscribe( data => {
       console.log(data);
       this.getUsuarios();
-    })
+    }).unsubscribe;
   }
 
   goToHome(){
     this.router.navigate(['']);
+  }
+
+  goToProduto(){
+    this.router.navigate(['/listaProduto']);
+    console.log("produto");
+  }
+
+  goToUsuario(){
+    this.router.navigate(['/listaUsuario']);
   }
 
 }

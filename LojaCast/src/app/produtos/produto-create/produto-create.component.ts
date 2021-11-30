@@ -22,7 +22,7 @@ export class ProdutoCreateComponent implements OnInit {
       console.log(data);
       this.goToProdutoList();
     },
-    error => console.log(error));
+    error => console.log(error)).unsubscribe;
   }
 
   goToProdutoList(){

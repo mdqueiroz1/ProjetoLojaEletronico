@@ -111,3 +111,14 @@
 .btn {
   border-radius: 10px;
 }
+
+
+span{
+  margin-left: 20px ;
+  cursor: pointer;
+  color: white;
+}
+
+.navbar-style{
+  background-color: rgb(53, 53, 53);
+}
