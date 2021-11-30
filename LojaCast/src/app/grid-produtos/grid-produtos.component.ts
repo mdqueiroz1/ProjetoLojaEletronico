@@ -28,21 +28,21 @@ export class GridProdutosComponent implements OnInit {
   getProdutos(){
     this.produtoService.getListaProduto().subscribe(data => {
       this.produtos = data;
-    });
+    }).unsubscribe;
   }
 
   adicionarCarrinho(id :number){
     this.carrinhoService.adicionarAoCarrinho(id).subscribe(res =>{
       console.log(res);
       this.snackBar.open("Adicionado ao carrinho! ", "Ok",{duration:2000});
-    })
+    }).unsubscribe;
   }
 
   comprarProduto(id:number){
     this.carrinhoService.adicionarAoCarrinho(id).subscribe(res =>{
       console.log(res);
       this.router.navigate(['/carrinho']);
-    })
+    }).unsubscribe;
   }
 
 }

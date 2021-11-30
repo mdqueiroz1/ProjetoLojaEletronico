@@ -26,6 +26,6 @@ export class LoginComponent implements OnInit {
     this.authService.loginWithEmail(this.email, this.senha)
   }
 
-  emailFormControl = new FormControl('', [Validators.required]);
-  senhaFormControl = new FormControl('', [Validators.required]);
+  emailFormControl = new FormControl('', [Validators.required, Validators.email]);
+  senhaFormControl = new FormControl('', [Validators.required, Validators.minLength(4)]);
 }

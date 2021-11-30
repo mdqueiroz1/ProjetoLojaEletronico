@@ -29,14 +29,14 @@ export class UsuarioUpdateComponent implements OnInit {
     this.usuarioService.updateUsuario(this.id, this.usuario).subscribe( data =>{
       this.goToUsuarioList();
     }
-    , error => console.log(error));
+    , error => console.log(error)).unsubscribe;
   }
 
   goToUsuarioList(){
     this.router.navigate(['/listaUsuario']);
   }
 
-  
+
   goBack(){
     this.router.navigate(['/listaUsuario']);
   }

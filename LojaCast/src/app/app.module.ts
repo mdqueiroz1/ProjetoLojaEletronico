@@ -15,14 +15,6 @@ import { AppComponent } from './app.component';
 import { AuthService } from './auth.service';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { DescricaoProdutoComponent } from './descricao-produto/descricao-produto.component';
-import { DescricaoProduto2Component } from './descricao-produto2/descricao-produto2.component';
-import { DescricaoProduto3Component } from './descricao-produto3/descricao-produto3.component';
-import { DescricaoProduto4Component } from './descricao-produto4/descricao-produto4.component';
-import { DescricaoProduto5Component } from './descricao-produto5/descricao-produto5.component';
-import { DescricaoProduto6Component } from './descricao-produto6/descricao-produto6.component';
-import { DescricaoProduto7Component } from './descricao-produto7/descricao-produto7.component';
-import { DescricaoProduto8Component } from './descricao-produto8/descricao-produto8.component';
-import { DescricaoProduto9Component } from './descricao-produto9/descricao-produto9.component';
 import { EntregaEfreteComponent } from './entrega-efrete/entrega-efrete.component';
 import { FooterComponent } from './footer/footer.component';
 import { GridProdutosComponent } from './grid-produtos/grid-produtos.component';
@@ -73,14 +65,6 @@ const configFirebase = {
     PoliticaEtrocaComponent,
     GridProdutosComponent,
     DescricaoProdutoComponent,
-    DescricaoProduto2Component,
-    DescricaoProduto3Component,
-    DescricaoProduto4Component,
-    DescricaoProduto5Component,
-    DescricaoProduto6Component,
-    DescricaoProduto7Component,
-    DescricaoProduto8Component,
-    DescricaoProduto9Component,
     ProdutosComponent,
     UsuarioComponent,
     UsuarioDeleteComponent,

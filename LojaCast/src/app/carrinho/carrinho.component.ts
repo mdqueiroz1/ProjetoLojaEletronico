@@ -1,8 +1,6 @@
-import { ValueConverter } from '@angular/compiler/src/render3/view/template';
 import { Component, OnInit } from '@angular/core';
-import { Router, RouterLink } from '@angular/router';
+import { Router } from '@angular/router';
 import { Carrinho } from '../classes/carrinho';
-import { Produto } from '../classes/produto';
 import { CarrinhoService } from '../services/carrinho.service';
 
 @Component({
@@ -47,7 +45,7 @@ export class CarrinhoComponent implements OnInit {
     this.carrinhoService.deleteCarrinho(id).subscribe( data => {
       console.log(data);
       this.getCarrinho();
-    })
+    }).unsubscribe;
   }
 
   goToHome(){

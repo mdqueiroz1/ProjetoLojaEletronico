@@ -39,7 +39,7 @@ export class UsuarioListComponent implements OnInit {
     this.usuarioService.deleteUsuario(id).subscribe( data => {
       console.log(data);
       this.getUsuarios();
-    })
+    }).unsubscribe;
   }
 
   goToHome(){

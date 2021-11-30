@@ -48,7 +48,8 @@ export class PagamentoComponent implements OnInit {
     this.cepService.consultaCep(this.cepValor).subscribe(res => {
       console.log(res);
       this.cep = res;
-    })
+
+    }).unsubscribe;
   }
 
   finalizarCompra() { }
