@@ -25,7 +25,7 @@
         <div class="endereco-container">
           <mat-form-field class="input-endereco" appearance="fill">
             <mat-label>Endereço</mat-label>
-            <input matInput placeholder="Ex. Rua Um" [formControl]="enderecoFormControl" required>
+            <input matInput placeholder="Ex. Rua Um" [formControl]="enderecoFormControl" value="{{ cep.logradouro }}" required>
             <mat-error *ngIf="enderecoFormControl.invalid">O endereço não pode ficar em branco</mat-error>
           </mat-form-field>
 

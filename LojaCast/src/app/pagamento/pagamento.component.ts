@@ -4,7 +4,6 @@ import { FormControl, FormBuilder, Validators, FormGroup } from '@angular/forms'
 import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
 import { CepService } from '../services/cep.service';
 import { Cep } from '../classes/cep';
-import { CarrinhoComponent } from '../carrinho/carrinho.component';
 
 @Component({
   selector: 'app-pagamento',
@@ -60,12 +59,11 @@ export class PagamentoComponent implements OnInit {
   bairroFormControl = new FormControl('', [Validators.required, Validators.maxLength(60)]);
   cepFormControl = new FormControl('', [Validators.required, Validators.maxLength(8)]);
   estadoFormControl = new FormControl('', [Validators.required, Validators.maxLength(2)]);
-  cartaoDeCreditoFormControl = new FormControl('', Validators.required);
-  cvcFormControl = new FormControl('', Validators.required);
-  cpfBoletoFormControl = new FormControl('', Validators.required);
-  nomeBoletoFormControl = new FormControl('', Validators.required);
-  nomeCartaoFormControl = new FormControl('', Validators.required);
-  dataCartaoFormControl = new FormControl('', Validators.required);
-  mesFormControl = new FormControl('', [Validators.required, Validators.maxLength(3)]);
-  anoFormControl = new FormControl('', [Validators.required, Validators.maxLength(3)]);
+  cartaoDeCreditoFormControl = new FormControl('', [Validators.required,Validators.minLength(16),Validators.maxLength(16)]);
+  cvcFormControl = new FormControl('',[ Validators.required,Validators.minLength(3),Validators.maxLength(3)]);
+  cpfBoletoFormControl = new FormControl('',[ Validators.required, Validators.minLength(11),Validators.maxLength(11)]);
+  nomeBoletoFormControl = new FormControl('', [Validators.required, Validators.minLength(3)]);
+  nomeCartaoFormControl = new FormControl('', [Validators.required,Validators.minLength(3)]);
+  mesFormControl = new FormControl('', [Validators.required, Validators.maxLength(2),Validators.minLength(2)]);
+  anoFormControl = new FormControl('', [Validators.required, Validators.maxLength(4),Validators.minLength(4)]);
 }
