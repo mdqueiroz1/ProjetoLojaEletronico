@@ -13,8 +13,6 @@ export class CadastroComponent implements OnInit {
   constructor(public authService: AuthService) { }
 
   usuario = new Usuario();
-
-  email!:string;
   senha!:string;
 
 
@@ -29,6 +27,5 @@ export class CadastroComponent implements OnInit {
   senhaFormControl = new FormControl('', [Validators.required,Validators.minLength(4)]);
   confirmSenhaFormControl = new FormControl('', [Validators.required, Validators.minLength(4)]);
   cpfFormControl = new FormControl('', [Validators.required, Validators.maxLength(11),Validators.minLength(11)]);
-  cepFormControl = new FormControl('', [Validators.required, Validators.maxLength(8),Validators.minLength(8)]);
 
 }

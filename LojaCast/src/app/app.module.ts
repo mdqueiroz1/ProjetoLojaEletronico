@@ -8,12 +8,12 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
 
-
 import { AngularMaterialModule } from './angular-material/angular-material.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthService } from './auth.service';
 import { CadastroComponent } from './cadastro/cadastro.component';
+import { CarrinhoComponent } from './carrinho/carrinho.component';
 import { DescricaoProdutoComponent } from './descricao-produto/descricao-produto.component';
 import { EntregaEfreteComponent } from './entrega-efrete/entrega-efrete.component';
 import { FooterComponent } from './footer/footer.component';
@@ -24,20 +24,20 @@ import { LoginComponent } from './login/login.component';
 import { PagamentoComponent } from './pagamento/pagamento.component';
 import { Page404Component } from './page404/page404.component';
 import { PoliticaEtrocaComponent } from './politica-etroca/politica-etroca.component';
-import { QuemSomosComponent } from './quem-somos/quem-somos.component';
-import { ProdutosComponent } from './produtos/produtos.component';
-import { UsuarioComponent } from './usuario/usuario/usuario.component';
-import { UsuarioDeleteComponent } from './usuario/usuario-delete/usuario-delete.component';
-import { UsuarioListComponent } from './usuario/usuario-list/usuario-list.component';
-import { UsuarioUpdateComponent } from './usuario/usuario-update/usuario-update.component';
-import { UsuarioDetalhesComponent } from './usuario/usuario-detalhes/usuario-detalhes.component';
-import { UsuarioCreateComponent } from './usuario/usuario-create/usuario-create.component';
-import { ProdutoDeleteComponent } from './produtos/produto-delete/produto-delete.component';
 import { ProdutoCreateComponent } from './produtos/produto-create/produto-create.component';
+import { ProdutoDeleteComponent } from './produtos/produto-delete/produto-delete.component';
+import { ProdutoDetailComponent } from './produtos/produto-detail/produto-detail.component';
 import { ProdutoListComponent } from './produtos/produto-list/produto-list.component';
 import { ProdutoUpdateComponent } from './produtos/produto-update/produto-update.component';
-import { ProdutoDetailComponent } from './produtos/produto-detail/produto-detail.component';
-import { CarrinhoComponent } from './carrinho/carrinho.component';
+import { ProdutosComponent } from './produtos/produtos.component';
+import { QuemSomosComponent } from './quem-somos/quem-somos.component';
+import { UsuarioCreateComponent } from './usuario/usuario-create/usuario-create.component';
+import { UsuarioDeleteComponent } from './usuario/usuario-delete/usuario-delete.component';
+import { UsuarioDetalhesComponent } from './usuario/usuario-detalhes/usuario-detalhes.component';
+import { UsuarioListComponent } from './usuario/usuario-list/usuario-list.component';
+import { UsuarioUpdateComponent } from './usuario/usuario-update/usuario-update.component';
+import { UsuarioComponent } from './usuario/usuario/usuario.component';
+
 
 
 const configFirebase = {
