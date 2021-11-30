@@ -25,7 +25,7 @@
 
         <mat-form-field class="input-email-usuario" appearance="fill">
           <mat-label>E-mail</mat-label>
-          <input [(ngModel)]="usuario.email" type="email" matInput placeholder="Ex. pat@example.com"
+          <input [(ngModel)]="usuario.email" type="email" matInput placeholder="Ex. exemplo@exemplo.com"
             [formControl]="emailFormControl" required>
           <mat-error *ngIf="emailFormControl.invalid">O e-mail não pode ficar em branco</mat-error>
         </mat-form-field>

@@ -25,14 +25,12 @@ export class LoginComponent implements OnInit {
   }
 
   fazerLogin() {
-
     if(this.email == 'adm@adm.com' && this.senha == 'admin123'){
       this.router.navigate(['/listaProduto']);
       this.snackBar.open("Logado como adm", "Ok", {duration:2000});
     }else{
-      this.authService.loginWithEmail(this.email, this.senha)
+      this.authService.loginWithEmail(this.email, this.senha);
     }
-
   }
 
   emailFormControl = new FormControl('', [Validators.required, Validators.email]);

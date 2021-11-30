@@ -22,7 +22,7 @@ export class CadastroComponent implements OnInit {
     this.authService.signUpEmail(this.usuario, this.senha);
   }
 
-  nomeFormControl = new FormControl('', [Validators.required, Validators.minLength(2)]);
+  nomeFormControl = new FormControl('', [Validators.required, Validators.minLength(3), Validators.pattern('[A-Za-z]*')]);
   emailFormControl = new FormControl('', [Validators.required, Validators.email ]);
   senhaFormControl = new FormControl('', [Validators.required,Validators.minLength(4)]);
   confirmSenhaFormControl = new FormControl('', [Validators.required, Validators.minLength(4)]);

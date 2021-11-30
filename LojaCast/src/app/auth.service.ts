@@ -52,8 +52,8 @@ export class AuthService {
       .then(
         value => {
           console.log(value);
-          this.usuarioService.createUsuario(usuario);
           console.log("usuário cadastrado no firebase com sucesso");
+          this.usuarioService.createUsuario(usuario);
           this.snackBar.open("Usuário cadastrado com sucesso!","Certo");
         }
 
