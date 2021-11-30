@@ -4,7 +4,6 @@
       <a [routerLink]="['/descricaoProduto', produto.idImagem ]" routerLinkActive="router-link-active"><img src="../../assets/produto-{{produto.idImagem}}.jpg"></a>
       <div class="card-body">
         <h5 class="card-title">{{ produto.nomeProduto }}</h5>
-        <p><s><b>{{ produto.precoProduto }}</b></s></p>
         <p id="precoAtual"><b>R$ {{produto.precoProduto }}</b></p>
       <p>À vista no PIX</p>
       <p class="card-text">{{ produto.descricaoProduto }}</p>

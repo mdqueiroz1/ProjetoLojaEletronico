@@ -46,4 +46,13 @@ export class UsuarioListComponent implements OnInit {
     this.router.navigate(['']);
   }
 
+  goToProduto(){
+    this.router.navigate(['/listaProduto']);
+    console.log("produto");
+  }
+
+  goToUsuario(){
+    this.router.navigate(['/listaUsuario']);
+  }
+
 }

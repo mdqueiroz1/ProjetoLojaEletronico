@@ -65,3 +65,26 @@ input {
   border: 3px solid orange;
   border-radius: 10px;
 }
+
+.goBackButton {
+  width: 50%;
+  border: 3px solid white;
+  border-radius: 10px;
+  background-color: green;
+  color: white;
+  font-weight: bold;
+  transition: background 1sg;
+}
+
+.goBackButton:hover {
+  width: 50%;
+  border: 3px solid green;
+  border-radius: 10px;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+}
+
+.btn {
+  border-radius: 10px;
+}
